@@ -1,0 +1,60 @@
+body{
+            margin: 0;
+            padding: 0;
+            font-family: arial;
+            color: #2C2C2C;
+            font-size: 14px;
+        }
+        h1 a{
+            color:#2C2C2C;
+            text-decoration:none;
+        }
+        h1 a:hover{
+            text-decoration:underline;
+        }
+        .as_wrapper{
+            margin: 0 auto;
+            width: 1000px;
+        }
+        .mytable{
+            margin: 0 auto;
+            padding: 20px;
+            border:2px dashed #17A3F7;
+        }
+        .success{
+            color:#009900;
+        }
+        .error{
+            color:#F33C21;
+        }
+        .talign_right{
+            text-align:right;
+        }
+        .username_avail_result{
+            display:block;
+            width:180px;
+        }
+        .password_strength {
+            display:block;
+            width:180px;
+            padding:3px;
+            text-align:center;
+            color:#333;
+            font-size:12px;
+            backface-visibility:#FFF;
+            font-weight:bold;
+        }
+        /* Password strength indicator classes weak, normal, strong, verystrong*/
+        .password_strength.weak{
+            background:#e84c3d;
+        }
+        .password_strength.normal{
+            background:#f1c40f;
+        }
+        .password_strength.strong{
+            background:#27ae61;
+        }
+        .password_strength.verystrong{
+            background:#2dcc70;
+            color:#FFF;
+        }
