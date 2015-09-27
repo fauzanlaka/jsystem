@@ -44,5 +44,7 @@
 <?php
 		include 'module/setting/teacher/add.php';
         }else{
+        	include 'module/setting/teacher/function/codeName.php';
+        	//codeName();	
         }
 ?>
