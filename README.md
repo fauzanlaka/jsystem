@@ -1,2 +1,0 @@
-# jsystem
-Hey fauzan
