@@ -21,7 +21,7 @@
 	$identitynumber = mysqli_query($con, "SELECT * FROM teachers WHERE t_cityzenid='$t_cityzenid'");
 	$row1 = mysqli_fetch_array($identitynumber);
         
-        //Existing teacher username checking
+    //Existing teacher username checking
 	$username = mysqli_query($con, "SELECT * FROM teachers WHERE t_username='$t_username'");
 	$row2 = mysqli_fetch_array($username);
 
@@ -42,6 +42,7 @@
           <p>Username sudah di guna</p>
         </div>
 <?php
-        include 'module/setting/teacher/add.php';
+		include 'module/setting/teacher/add.php';
+        }else{
         }
 ?>
