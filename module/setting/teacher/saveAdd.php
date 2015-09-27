@@ -44,8 +44,6 @@
 <?php
 		include 'module/setting/teacher/add.php';
         }else{
-        	include 'module/setting/teacher/function/codeName.php';
-        	codeName();	
-        	echo $m;
+			$sql = mysqli_query($con, "INSERT INTO teachers (t_fnameRumi) VALUES ($t_fnameRumi)");	
         }
 ?>
