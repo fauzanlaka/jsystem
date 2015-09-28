@@ -26,10 +26,9 @@
 	$row2 = mysqli_fetch_array($username);
 
 	//Creat teacher code(t_code)
-	$t_code = "SELECT max(t_code) AS mx FROM teachers";
-	$record = mysqli_query($con, $t_code) or die(mysqli_error());
-	$row = mysqli_fetch_assoc($record);
-	$mem_old = $row['mx'];// gives the highest id
+	$t_code = mysqli_query($con, "SELECT * FROM teachers WHERE t_id = (SELECT max(t_id) FROM teachers)");
+        $maxVal = mysqli_fetch_array($t_code);
+        $mem_old = $maxVal['t_code'];
 
 	$tmp1=substr($mem_old,2);
 	$tmp2=$tmp1+1;
@@ -43,6 +42,10 @@
 	}elseif($tmp2 <= 9){
 	    $tmp3='PE000'.$tmp2;
 	}
+        
+        echo $mem_old;
+        echo "<br>";
+        echo $tmp3;
 
 	//-------------------------------------------------------------------------------------------------------
 	if($row1[0] > 0){
