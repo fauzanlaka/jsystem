@@ -2,7 +2,7 @@
 <div class="well">
     <h4><span class="glyphicon glyphicon-new-window"></span> <b>TAMBAH MAKLUMAT</b></h4>
     <hr>
-    <form class="form-horizontal" action="?page=setting&&settingpage=saveAdd" enctype="multipart/form-data" method="POST">
+    <form class="form-horizontal" action="?page=post&&postpage=saveAdd" enctype="multipart/form-data" method="POST">
                 
                 <div class="form-group">
                     <label class="col-lg-2 control-label">Tajuk :</label>
@@ -14,7 +14,8 @@
                 <div class="form-group">
                     <label class="col-lg-2 control-label">Maklumat :</label>
                     <div class="col-lg-9">
-                        <textarea id="p_post" name="p_post" class="form-control" rows="8" style="width:100%" required></textarea>
+                        <textarea id="p_post" name="p_post" class="form-control" rows="8" style="width:100%" required>		
+                        </textarea> 
                     </div>
                 </div>
         
@@ -40,7 +41,7 @@
                 <div class="form-group">
                     <div class="col-lg-10 col-lg-offset-2">
                         <button type="reset" class="btn btn-default">BATAL</button>
-                        <button type="submit" class="btn btn-primary" name="save">SIMPAN</button>
+                        <button type="submit" class="btn btn-primary">SIMPAN</button>
                     </div>
                 </div>
     </form>
