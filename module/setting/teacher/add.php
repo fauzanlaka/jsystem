@@ -89,14 +89,14 @@
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Post :</label>
                     <div class="col-lg-3">
-                      <input type="email" class="form-control input-sm" name="t_postcode">
+                      <input type="text" class="form-control input-sm" name="t_postcode">
                     </div>
                 </div>
         
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Telpon :</label>
                     <div class="col-lg-3">
-                      <input type="email" class="form-control input-sm" name="t_telephone">
+                      <input type="text" class="form-control input-sm" name="t_telephone">
                     </div>
                 </div>
                 

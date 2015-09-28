@@ -20,5 +20,8 @@
         case 'saveAdd':
             include 'module/setting/teacher/saveAdd.php';
             break;
+        case 'teacherEdit':
+            include 'module/setting/teacher/teacherEdit.php';
+            break;
     }
 ?>
