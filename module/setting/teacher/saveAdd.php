@@ -44,6 +44,9 @@
 <?php
 		include 'module/setting/teacher/add.php';
         }else{
-			$sql = mysqli_query($con, "INSERT INTO teachers (t_fnameRumi) VALUES ($t_fnameRumi)");	
+			$sql = mysqli_query($con, "INSERT INTO teachers 
+                  (t_fnameArab,t_lnameArab,t_fnameRumi,t_lnameRumi) VALUES 
+                  ('$t_fnameArab','$t_lnameArab','$t_fnameRumi','$t_lnameRumi')
+                  ");
         }
 ?>
