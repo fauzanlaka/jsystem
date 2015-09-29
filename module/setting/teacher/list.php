@@ -101,7 +101,8 @@
     <tbody>
 <?php
     while($row = mysqli_fetch_array($query)){
-        $id = $row['t_code'];
+        $id = $row['t_id'];
+        $code = $row['t_code'];
         $fname = str_replace("\'", "&#39;", $row["t_fnameRumi"]);
         $lname = str_replace("\'", "&#39;", $row["t_lnameRumi"]);
         $fname_j = str_replace("\'", "&#39;", $row["t_fnameArab"]);
@@ -110,12 +111,12 @@
         $telephone = str_replace("\'", "&#39;", $row["t_telephone"]);
 ?>
         <tr>
-          <td align="center"><?= $id ?></td>
+          <td align="center"><?= $code ?></td>
           <td><?= strtoupper($fname) ?> - <?= strtoupper($lname) ?></td>
           <td align="right"><?= strtoupper($fname_j) ?> - <?= strtoupper($lname_j) ?></td>
           <td><?= $faculty ?></td>
           <td align="center"><?= $telephone ?></td>
-          <td align="center"><a ><span class="glyphicon glyphicon-edit"></span></a> / <a href="?page=student&&studentpage=delete&&id=<?= $id ?>" onclick="return confirm('Anda yakin untuk hapus data ini ?')"><span class="glyphicon glyphicon-remove"></span></a></td>
+          <td align="center"><a href="?page=setting&&settingpage=editTeacher&&id=<?= $id ?>" ><span class="glyphicon glyphicon-edit"></span></a> / <a href="?page=setting&&settingpage=deleteTeacher&&id=<?= $id ?>" onclick="return confirm('Anda yakin untuk hapus data ini ?')"><span class="glyphicon glyphicon-remove"></span></a></td>
         </tr>
 <?php
     }

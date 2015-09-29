@@ -42,10 +42,6 @@
 	}elseif($tmp2 <= 9){
 	    $tmp3='PE000'.$tmp2;
 	}
-        
-        echo $mem_old;
-        echo "<br>";
-        echo $tmp3;
 
 	//-------------------------------------------------------------------------------------------------------
 	if($row1[0] > 0){
@@ -108,7 +104,7 @@
                         <br>
                         <div class="alert alert-dismissible alert-success">
                             <button type="button" class="close" data-dismiss="alert">×</button>
-                            <strong>Berhasil!</strong> Data berhasil di simpan <a href="?page=setting&&settingpage=teacherEdit&&id=<?= $id ?>" class="alert-link"> Klik untuk lihat</a>
+                            <strong>Berhasil!</strong> Data berhasil di simpan <a href="?page=setting&&settingpage=editTeacher&&id=<?= $id ?>" class="alert-link"> Klik untuk lihat</a>
                         </div>
 <?php
 			}

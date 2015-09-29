@@ -23,5 +23,14 @@
         case 'teacherEdit':
             include 'module/setting/teacher/teacherEdit.php';
             break;
+        case 'editTeacher':
+            include 'module/setting/teacher/editTeacher.php';
+            break;
+        case 'saveEditTeacher':
+            include 'module/setting/teacher/saveEditTeacher.php';
+            break;
+        case 'deleteTeacher':
+            include 'module/setting/teacher/deleteTeacher.php';
+            break;
     }
 ?>
