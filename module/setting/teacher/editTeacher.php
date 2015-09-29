@@ -22,7 +22,8 @@
     $t_username = str_replace("\'", "&#39;", $rs['t_username']);
     $t_password = str_replace("\'", "&#39;", $rs['t_password']);
 ?>
-
+<br>
+<div class='well'>
     <h4><span class="glyphicon glyphicon-edit"></span> <b>UBAH DATA PENSYARAH</b></h4>
     <hr>
     <form class="form-horizontal" action="?page=setting&&settingpage=saveEditTeacher&&id=<?= $id ?>" enctype="multipart/form-data" method="POST">
@@ -165,4 +166,5 @@
                     </div>
                 </div>
     </form>
-
+</div>
+    

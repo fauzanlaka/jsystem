@@ -8,9 +8,7 @@
     $settingpage = $_GET['settingpage']; // To get the page
 
     switch ($settingpage) {
-        case 'subject':
-            include 'module/setting/subject/list.php';
-            break;
+        //Teacher
         case 'teacher':
             include 'module/setting/teacher/list.php';
             break;
@@ -31,6 +29,16 @@
             break;
         case 'deleteTeacher':
             include 'module/setting/teacher/deleteTeacher.php';
+            break;
+        //subject
+        case 'subject':
+            include 'module/setting/subject/list.php';
+            break;
+        case 'subjectAdd':
+            include 'module/setting/subject/subjectAdd.php';
+            break;
+        case 'saveSubject':
+            include 'module/setting/subject/saveSubject.php';
             break;
     }
 ?>

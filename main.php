@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="pagination/reset.css" type="text/css">
     <link rel="stylesheet" href="pagination/style.css" type="text/css">
     <link rel="stylesheet" href="function/checkuser.css" type="text/css">
+    <link rel="stylesheet" href="select/dist/css/bootstrap-select.css">
     <style type="text/css">
         body{ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;}
         div#pagination_controls{font-size:21px;}
@@ -99,6 +100,8 @@
         <script type="text/javascript" src="function/checkuser.js"></script>
         <script type="text/javascript" src="function/checkstudent.js"></script>
         <script type="text/javascript" src="function/checkteacher.js"></script>
+        <script type="text/javascript" src="function/all.js"></script>
+        <script src="select/dist/js/bootstrap-select.js"></script>
         <script language="javascript">
             function printdiv(printpage)
             {

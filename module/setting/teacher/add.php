@@ -1,5 +1,6 @@
-
-    <h4><span class="glyphicon glyphicon-user"></span> <b>TAMBAH PENSYARAH</b></h4>
+<br>
+<div class='well'>
+<h4><span class="glyphicon glyphicon-user"></span> <b>TAMBAH PENSYARAH</b></h4>
     <hr>
     <form class="form-horizontal" action="?page=setting&&settingpage=saveAdd" enctype="multipart/form-data" method="POST">
                 
@@ -141,4 +142,6 @@
                     </div>
                 </div>
     </form>
-
+   
+</div>
+    
