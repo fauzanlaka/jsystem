@@ -8,7 +8,7 @@
     $p_post = mysqli_real_escape_string($con, $_POST['p_post']);
     $p_other = mysqli_real_escape_string($con, $_POST['p_other']);
     $p_date = date('Y-m-d');
-    $p_author = $rs['u_id'];
+    $p_author = $rs['u_status'];
     $publish = $_POST['publish'];
     
     $insert = mysqli_query($con, 

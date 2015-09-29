@@ -1,7 +1,6 @@
 <div class="btn-group btn-group-justified">
   <a href="?page=post&&postpage=add" class="btn btn-default"><span class="glyphicon glyphicon-plus-sign"></span> TAMBAH POST</a>
-  <a href="?page=post&&postpage=list" class="btn btn-default"><span class="glyphicon glyphicon-list"></span> Data pensyarah</a>
-  <a href="?page=setting&&settingpage=main" class="btn btn-default"><span class="glyphicon glyphicon-list"></span> Fakulti & Jurusan</a>
+  <a href="?page=post&&postpage=list" class="btn btn-default"><span class="glyphicon glyphicon-list"></span> POST</a>
 </div>
 
 <?php
@@ -19,6 +18,15 @@
             break;
         case 'list':
             include 'module/post/list.php';
+            break;
+        case 'delete':
+            include 'module/post/delete.php';
+            break;
+        case 'edit':
+            include 'module/post/edit.php';
+            break;
+        case 'saveEdit':
+            include 'module/post/saveEdit.php';
             break;
     }
 ?>

@@ -1,4 +1,3 @@
-<br>
 <div class="pull-right">
         <form class="navbar-form" role="search" action="?page=payment&&paymentpage=muqaddimahsearch" method="post">
             <div class="input-group">
@@ -82,37 +81,30 @@
     $list = '';
 ?>
 
-<br><br>
+<br>
 <?= $textline2 ?>
 <table class="table table-striped table-hover table-bordered">
     <thead>
       <tr>
-        <td align="center"><b>KODE</b></td>
-        <td align="center"><b>NAMA-NASAB</b></td>
-        <td align="center"><b>نام - نسب</b></td>
-        <td align="center"><b>EMAIL</b></td>
-        <td align="center"><b>TELEPON</b></td>
-        <td align="center"><b>UBAH / HAPUS</b></td>
+        <td align="center"><b>TARIKH POST</b></td>
+        <td align="center"><b>TAJUK</b></td>
+        <td align="center"><b>PENGEPOS</b></td>
+        <td align="center"><b>AKSI</b></td>
       </tr>
     </thead>
     <tbody>
 <?php
     while($row = mysqli_fetch_array($query)){
-        $id = $row['t_code'];
-        $fname = str_replace("\'", "&#39;", $row["t_fnameRumi"]);
-        $lname = str_replace("\'", "&#39;", $row["t_lnameRumi"]);
-        $fname_j = str_replace("\'", "&#39;", $row["t_fnameArab"]);
-        $lname_j = str_replace("\'", "&#39;", $row["t_lnameArab"]);
-        $faculty = str_replace("\'", "&#39;", $row["t_email"]);
-        $telephone = str_replace("\'", "&#39;", $row["t_telephone"]);
+        $id = $row['p_id'];
+        $p_date = str_replace("\'", "&#39;", $row["p_date"]);
+        $p_title = str_replace("\'", "&#39;", $row["p_title"]);
+        $p_author = str_replace("\'", "&#39;", $row["p_author"]);
 ?>
         <tr>
-          <td align="center"><?= $id ?></td>
-          <td><?= strtoupper($fname) ?> - <?= strtoupper($lname) ?></td>
-          <td align="right"><?= strtoupper($fname_j) ?> - <?= strtoupper($lname_j) ?></td>
-          <td><?= $faculty ?></td>
-          <td align="center"><?= $telephone ?></td>
-          <td align="center"><a ><span class="glyphicon glyphicon-edit"></span></a> / <a href="?page=student&&studentpage=delete&&id=<?= $id ?>" onclick="return confirm('Anda yakin untuk hapus data ini ?')"><span class="glyphicon glyphicon-remove"></span></a></td>
+          <td align="center"><?= $p_date ?></td>
+          <td><?= substr($p_title, 0,40)."..." ?></td>
+          <td align="right"><?= $p_author ?></td>
+          <td align="center"><a href="?page=post&&postpage=edit&&id=<?= $id ?>" ><span class="glyphicon glyphicon-edit"></span></a> / <a href="?page=post&&postpage=delete&&id=<?= $id ?>" onclick="return confirm('Anda yakin untuk hapus data ini ?')"><span class="glyphicon glyphicon-remove"></span></a></td>
         </tr>
 <?php
     }
