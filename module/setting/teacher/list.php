@@ -1,9 +1,9 @@
 <br>
 <div class="pull-left">
-    <a href="?page=setting&&settingpage=teacherAdd" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-plus-sign"></span> Tambah pensyarah</a>
+    <a href="?page=setting&&settingpage=teacherAdd" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-plus-sign"></span> TAMBAH PENSYARAH</a>
 </div>
 <div class="pull-right">
-        <form class="navbar-form" role="search" action="?page=payment&&paymentpage=muqaddimahsearch" method="post">
+        <form class="navbar-form" role="search" action="?page=setting&&settingpage=searchTeacher" method="post">
             <div class="input-group">
                 <input type="text" class="form-control" name="q" required>
             <div class="input-group-btn">

@@ -1,21 +1,32 @@
 <?php
-    $sql =  mysqli_query($con, "SELECT * FROM fakultys");
+    $id = $_GET['id'];
+    
+    $sql = mysqli_query($con, "SELECT * FROM subject WHERE s_id='$id'");
+    $rs = mysqli_fetch_array($sql);
+    
+    $ft_id = str_replace("\'", "&#39;", $rs['ft_id']);
+    $s_code = str_replace("\'", "&#39;", $rs['s_code']);
+    $s_arabName = str_replace("\'", "&#39;", $rs['s_arabName']);
+    $s_rumiName = str_replace("\'", "&#39;", $rs['s_rumiName']);
+    $s_engName = str_replace("\'", "&#39;", $rs['s_engName']);
+    $s_thaiName = str_replace("\'", "&#39;", $rs['s_thaiName']);
+    $s_type = str_replace("\'", "&#39;", $rs['s_type']);
+    $s_detail = str_replace("\'", "&#39;", $rs['s_detail']);
 ?>
 <br>
 <div class='well'>
-    <h4><span class="glyphicon glyphicon-book"></span> <b>TAMBAH MATA KULIAH</b></h4>
+    <h4><span class="glyphicon glyphicon-edit"></span> <b>UBAH DATA MATA KULIAH</b></h4>
     <hr>
-    <form class="form-horizontal" action="?page=setting&&settingpage=saveSubject" enctype="multipart/form-data" method="POST">
+    <form class="form-horizontal" action="?page=setting&&settingpage=saveEditSubject&&id=<?= $id ?>" enctype="multipart/form-data" method="POST">
      
         <div class='pull-right'>
-                    <button type="reset" class="btn btn-default btn-sm">BATAL</button>
                     <button type="submit" class="btn btn-primary btn-sm" name="save">SIMPAN</button>
         </div>
         
         <div class="form-group">
             <label class="col-lg-2 control-label">KODE :</label>
             <div class="col-lg-3">
-                <input type="text" class="form-control input-sm" placeholder="KODE MATA KULIAH" required name="s_code" id='subjectCode'>
+                <input type="text" class="form-control input-sm" value='<?= $s_code ?>' name="s_code" id='subjectCode'>
             </div>
             <div class="col-lg-4">
                 <span class="username_avail_result" id="subjectCode_avail_result"></span>
@@ -25,28 +36,28 @@
         <div class="form-group">
             <label class="col-lg-2 control-label">MATA KULIAH :</label>
             <div class="col-lg-5">
-                <input type="text" class="form-control input-sm" placeholder="RUMI" required name="s_rumiName">
+                <input type="text" class="form-control input-sm" value='<?= $s_rumiName ?>' name="s_rumiName">
             </div>
        </div>
         
         <div class="form-group">
             <label class="col-lg-2 control-label">MATA KULIAH :</label>
             <div class="col-lg-5">
-                <input type="text" class="form-control input-sm" placeholder="ARAB" name="s_arabName">
+                <input type="text" class="form-control input-sm" value='<?= $s_arabName ?>' name="s_arabName">
             </div>
        </div>
         
         <div class="form-group">
             <label class="col-lg-2 control-label">MATA KULIAH :</label>
             <div class="col-lg-5">
-                <input type="text" class="form-control input-sm" placeholder="INGRIS" name="s_engName">
+                <input type="text" class="form-control input-sm" value='<?= $s_engName ?>' name="s_engName">
             </div>
        </div>
         
         <div class="form-group">
             <label class="col-lg-2 control-label">MATA KULIAH :</label>
             <div class="col-lg-5">
-                <input type="text" class="form-control input-sm" placeholder="THAI" name="s_thaiName">
+                <input type="text" class="form-control input-sm" value='<?= $s_thaiName ?>' name="s_thaiName">
             </div>
        </div>
         
@@ -54,6 +65,7 @@
             <label class="col-lg-2 control-label">DETIL :</label>
             <div class="col-lg-10">
                 <textarea id="p_post" name="s_detail" class="form-control" rows="8" style="width:100%" required>		
+                    <?= $s_detail ?>
                 </textarea>
             </div>
        </div>
@@ -62,8 +74,8 @@
             <label class="col-lg-2 control-label">JENIS :</label>
             <div class="col-lg-3">
                 <select name="s_type" id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Pilih...">
-                    <option value="Jamiah">Jamiah</option>
-                    <option value="Kuliah">Kuliah</option>
+                    <option value="Jamiah" <?=$s_type == 'Jamiah' ? ' selected="selected"' : ''?>>Jamiah</option>
+                    <option value="Kuliah" <?=$s_type == 'Kuliah' ? ' selected="selected"' : ''?>>Kuliah</option>
                 </select>
            </div>
        </div>
@@ -72,10 +84,12 @@
             <label class="col-lg-2 control-label">KULIAH :</label>
             <div class="col-lg-3">
                 <select name="ft_id" id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Pilih...">
-                <?php
-                    while($row = mysqli_fetch_array($sql)){
+                    <option></option>
+                    <?php
+                    $faculty = mysqli_query($con, "SELECT * FROM fakultys");
+                    while($row = mysqli_fetch_array($faculty)){
                 ?>
-                    <option value="<?= $row['ft_id'] ?>"><?= $row['ft_name'] ?></option>
+                    <option value="<?= $row['ft_id'] ?>" <?=$ft_id == $row["ft_id"] ? ' selected="selected"' : ''?>><?= $row['ft_name'] ?></option>
                 <?php
                     }
                 ?>
@@ -85,7 +99,6 @@
         
        <div class="form-group">
             <div class="col-lg-10 col-lg-offset-10">
-                <button type="reset" class="btn btn-default btn-sm">BATAL</button>
                 <button type="submit" class="btn btn-primary btn-sm" name="save">SIMPAN</button>
             </div>
        </div>

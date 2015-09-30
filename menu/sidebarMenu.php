@@ -53,7 +53,7 @@
 <ul class="nav nav-pills nav-stacked">
     <li role="presentation" class="active"><a href="#">SISTEM IDARAH</a></li>
     <li role="presentation"><a href="?page=student&&studentpage=list"><span class='glyphicon glyphicon-user'></span> Data mahasiswa / داتا مهاسيسوا</a></li>
-    <li role="presentation"><a href="?page=setting&&settingpage=main"><span class='glyphicon glyphicon-cog'></span> Guru dan mata kuliah / كورو دان مات كلية</a></li>
+    <li role="presentation"><a href="?page=setting&&settingpage=main"><span class='glyphicon glyphicon-cog'></span> Perkuliahan / فركليهن</a></li>
     <li role="presentation"><a href="#"><span class='glyphicon glyphicon-briefcase'></span> Jadual guru</a></li>
     <li role="presentation"><a href="#"><span class='glyphicon glyphicon-tasks'></span> Borang / Form</a></li>
     <li role="presentation"><a href="#"><span class='glyphicon glyphicon-comment'></span> Peraturan</a></li>

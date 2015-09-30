@@ -30,6 +30,9 @@
         case 'deleteTeacher':
             include 'module/setting/teacher/deleteTeacher.php';
             break;
+        case 'searchTeacher':
+            include 'module/setting/teacher/searchTeacher.php';
+            break;
         //subject
         case 'subject':
             include 'module/setting/subject/list.php';
@@ -39,6 +42,18 @@
             break;
         case 'saveSubject':
             include 'module/setting/subject/saveSubject.php';
+            break;
+        case 'subjectEdit':
+            include 'module/setting/subject/subjectEdit.php';
+            break;
+        case 'saveEditSubject':
+            include 'module/setting/subject/saveEditSubject.php';
+            break;
+        case 'deleteSubject':
+            include 'module/setting/subject/deleteSubject.php';
+            break;
+        case 'searchSubject':
+            include 'module/setting/subject/searchSubject.php';
             break;
     }
 ?>
