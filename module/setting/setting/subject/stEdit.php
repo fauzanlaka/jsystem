@@ -1,3 +1,11 @@
+<?php
+    $id = $_GET['id'];
+    $sql = mysqli_query($con, "SELECT * FROM teaching WHERE tc_id='$id'");
+    $rows = mysqli_fetch_array($sql);
+    
+    $s_id = $rows['s_id'];
+    $t_id = $rows['t_id'];
+?>
 <br>
 <div class="pull-left">
     <a href="?page=setting&&settingpage=stAdd" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-plus-sign"></span> TAMBAH</a>
@@ -17,7 +25,7 @@
                     $subject = mysqli_query($con, "SELECT * FROM subject GROUP BY s_code ORDER BY s_code");
                     while($row = mysqli_fetch_array($subject)){
                 ?>
-                    <option value="<?= $row['s_id'] ?>"><?= $row['s_code'] ?> , <?= $row['s_rumiName'] ?></option>
+                    <option value="<?= $row['s_id'] ?>" <?=$s_id == $row['s_id'] ? ' selected="selected"' : ''?>><?= $row['s_code'] ?> , <?= $row['s_rumiName'] ?></option>
                 <?php
                     }
                 ?>
@@ -33,7 +41,7 @@
                     $teacher = mysqli_query($con, "SELECT * FROM teachers ORDER BY t_fnameRumi");
                     while($row = mysqli_fetch_array($teacher)){
                 ?>
-                    <option value="<?= $row['t_id'] ?>"><?= $row['t_fnameRumi'] ?> - <?= $row['t_lnameRumi'] ?> , <?= $row['t_lnameArab'] ?> - <?= $row['t_fnameArab'] ?></option>
+                    <option value="<?= $row['t_id'] ?>" <?=$t_id == $row['t_id'] ? ' selected="selected"' : ''?>><?= $row['t_fnameRumi'] ?> - <?= $row['t_lnameRumi'] ?> , <?= $row['t_lnameArab'] ?> - <?= $row['t_fnameArab'] ?></option>
                 <?php
                     }
                 ?>
@@ -50,3 +58,4 @@
         
     </form>
 </div>
+

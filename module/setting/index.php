@@ -68,5 +68,20 @@
         case 'saveSt':
             include 'module/setting/setting/subject/saveSt.php';
             break;
+        case 'stSearch':
+            include 'module/setting/setting/subject/stSearch.php';
+            break;
+        case 'stEdit':
+            include 'module/setting/setting/subject/stEdit.php';
+            break;
+        case 'stDelete':
+            include 'module/setting/setting/subject/stDelete.php';
+            break;
+        case 'l':
+            include 'module/setting/setting/learning/list.php';
+            break;
+        case 'rsAdd':
+            include 'module/setting/setting/learning/rsAdd.php';
+            break;
     }
 ?>
