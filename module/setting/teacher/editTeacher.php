@@ -28,6 +28,10 @@
     <hr>
     <form class="form-horizontal" action="?page=setting&&settingpage=saveEditTeacher&&id=<?= $id ?>" enctype="multipart/form-data" method="POST">
                 
+                <div class='pull-right'>
+                    <button type="submit" class="btn btn-primary btn-sm" name="save">SIMPAN</button>
+                </div> 
+        
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Nama-Nasab :</label>
                     <div class="col-lg-3">
@@ -159,12 +163,11 @@
                         <span class="password_strength" id="password_strength2"></span>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="col-lg-10 col-lg-offset-2">
-                        <button type="reset" class="btn btn-default">BATAL</button>
-                        <button type="submit" class="btn btn-primary" name="save">SIMPAN</button>
-                    </div>
+        
+                <div class='pull-right'>
+                    <button type="submit" class="btn btn-primary btn-sm" name="save">SIMPAN</button>
                 </div>
+        <br>
     </form>
 </div>
     

@@ -20,7 +20,7 @@
     <form class="form-horizontal" action="?page=setting&&settingpage=saveEditSubject&&id=<?= $id ?>" enctype="multipart/form-data" method="POST">
      
         <div class='pull-right'>
-                    <button type="submit" class="btn btn-primary btn-sm" name="save">SIMPAN</button>
+            <button type="submit" class="btn btn-primary btn-sm" name="save">SIMPAN</button>
         </div>
         
         <div class="form-group">

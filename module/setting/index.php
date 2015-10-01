@@ -1,7 +1,7 @@
 <div class="btn-group btn-group-justified">
   <a href="?page=setting&&settingpage=subject" class="btn btn-default"><span class="glyphicon glyphicon-list"></span> Mata kuliah</a>
   <a href="?page=setting&&settingpage=teacher" class="btn btn-default"><span class="glyphicon glyphicon-list"></span> Data pensyarah</a>
-  <a href="?page=setting&&settingpage=main" class="btn btn-default"><span class="glyphicon glyphicon-list"></span> Fakulti & Jurusan</a>
+  <a href="?page=setting&&settingpage=setting" class="btn btn-default"><span class="glyphicon glyphicon-cog"></span> SETTING</a>
 </div>
 
 <?php
@@ -54,6 +54,19 @@
             break;
         case 'searchSubject':
             include 'module/setting/subject/searchSubject.php';
+            break;
+        //Setting
+        case 'setting':
+            include 'module/setting/setting/list.php';
+            break;
+        case 'st':
+            include 'module/setting/setting/subject/list.php';
+            break;
+        case 'stAdd':
+            include 'module/setting/setting/subject/stAdd.php';
+            break;
+        case 'saveSt':
+            include 'module/setting/setting/subject/saveSt.php';
             break;
     }
 ?>

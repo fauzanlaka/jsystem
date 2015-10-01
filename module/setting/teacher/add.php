@@ -3,7 +3,11 @@
 <h4><span class="glyphicon glyphicon-user"></span> <b>TAMBAH PENSYARAH</b></h4>
     <hr>
     <form class="form-horizontal" action="?page=setting&&settingpage=saveAdd" enctype="multipart/form-data" method="POST">
-                
+                <div class='pull-right'>
+                    <button type="reset" class="btn btn-default btn-sm">BATAL</button>
+                    <button type="submit" class="btn btn-primary btn-sm" name="save">SIMPAN</button>
+                </div> 
+        
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Nama-Nasab :</label>
                     <div class="col-lg-3">
@@ -136,9 +140,9 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <div class="col-lg-10 col-lg-offset-2">
-                        <button type="reset" class="btn btn-default">BATAL</button>
-                        <button type="submit" class="btn btn-primary" name="save">SIMPAN</button>
+                    <div class="col-lg-10 col-lg-offset-10">
+                        <button type="reset" class="btn btn-default btn-sm">BATAL</button>
+                        <button type="submit" class="btn btn-primary btn-sm" name="save">SIMPAN</button>
                     </div>
                 </div>
     </form>

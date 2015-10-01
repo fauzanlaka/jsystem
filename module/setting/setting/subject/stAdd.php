@@ -1,0 +1,47 @@
+<br>
+<div class='well'>
+    <h4><span class="glyphicon glyphicon-cog"></span> <b>PENGURUSAN SABJEK</b></h4>
+    <hr>
+    <form class="form-horizontal" action="?page=setting&&settingpage=saveSt" enctype="multipart/form-data" method="POST">
+        
+       <div class="form-group">
+            <label class="col-lg-5 control-label">MATA KULIAH :</label>
+            <div class="col-lg-7">
+                <select name="s_id" id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Pilih...">
+                <?php
+                    $subject = mysqli_query($con, "SELECT * FROM subject GROUP BY s_code ORDER BY s_code");
+                    while($row = mysqli_fetch_array($subject)){
+                ?>
+                    <option value="<?= $row['s_id'] ?>"><?= $row['s_code'] ?> , <?= $row['s_rumiName'] ?></option>
+                <?php
+                    }
+                ?>
+                </select>
+           </div>
+       </div>
+        
+       <div class="form-group">
+            <label class="col-lg-5 control-label">PENSYARAH :</label>
+            <div class="col-lg-7">
+                <select name="t_id" id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Pilih...">
+                <?php
+                    $teacher = mysqli_query($con, "SELECT * FROM teachers ORDER BY t_fnameRumi");
+                    while($row = mysqli_fetch_array($teacher)){
+                ?>
+                    <option value="<?= $row['t_id'] ?>"><?= $row['t_fnameRumi'] ?> - <?= $row['t_lnameRumi'] ?> , <?= $row['t_lnameArab'] ?> - <?= $row['t_fnameArab'] ?></option>
+                <?php
+                    }
+                ?>
+                </select>
+           </div>
+       </div>
+        
+       <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-5">
+                <button type="reset" class="btn btn-default btn-sm">BATAL</button>
+                <button type="submit" class="btn btn-primary btn-sm" name="save">SIMPAN</button>
+            </div>
+       </div>
+        
+    </form>
+</div>
