@@ -83,5 +83,11 @@
         case 'rsAdd':
             include 'module/setting/setting/learning/rsAdd.php';
             break;
+        case 'sAdd':
+            include 'module/setting/setting/learning/sAdd.php';
+            break;
+        case 'sAddSave':
+            include 'module/setting/setting/learning/sAddSave.php';
+            break;
     }
 ?>

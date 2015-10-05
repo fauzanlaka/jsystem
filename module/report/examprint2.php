@@ -51,6 +51,11 @@
         header('Content-Disposition: attachment; filename="MyXls.xls"');#ชื่อไฟล์
         header('Cache-Control: max-age=0');
     ?>
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+
+xmlns="http://www.w3.org/TR/REC-html40">
 
 <HTML dir="rtl" lang="ar">
     <head>
@@ -60,7 +65,7 @@
     </head>
       
     <body>
-        <table>
+        <table x:str width="100%">
             <tr>
                 <td colspan="7" align="center">
                     <font size="4px"><b> جامعة الشيخ داود الفطاني اﻹسلامية - جالا </b></font><br><br>
@@ -70,7 +75,7 @@
             </tr>
         </table>
 
-        <table border="1px" width="100%">
+        <table x:str border="1" width="100%">
             <tr height="2px">
                 <td align="center" height="30"><b>نمبر رشيد</b></td>
                 <td align="center"><b>تغكل باير</b></td>
