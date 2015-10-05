@@ -26,7 +26,7 @@
             ?>
   </small><br>
   
-  <form class="form-horizontal" action="?page=setting&&settingpage=sAddSave&&ft_id=<?= $ft_id ?>&&dp_id=<?= $dp_id ?>&&term=<?= $term ?>" enctype="multipart/form-data" method="POST">
+  <form class="form-horizontal" action="?page=setting&&settingpage=sAddSave&&ft_id=<?= $ft_id ?>&&dp_id=<?= $dp_id ?>&&class=<?= $class ?>&&term=<?= $term ?>" enctype="multipart/form-data" method="POST">
         
        <div class="form-group">
             <label class="col-lg-5 control-label">MATA KULIAH :</label>
