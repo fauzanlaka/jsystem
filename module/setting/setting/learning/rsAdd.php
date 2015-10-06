@@ -126,7 +126,7 @@
                           </td>
                           <td>
                               &nbsp;&nbsp;&nbsp;&nbsp;
-                              <font color="red"><a href="?page=setting&&settingpage=subjectDelete&&ft_id=<?= $ft_id ?>&&dp_id=<?= $dp_id ?>&&id=<?= $row11['rs_id'] ?>"><span class="glyphicon glyphicon-remove"></span></a></font>
+                              <font color="red"><a href="?page=setting&&settingpage=rsDelete&&ft_id=<?= $ft_id ?>&&dp_id=<?= $dp_id ?>&&id=<?= $row11['rs_id'] ?>" onclick="return confirm('Anda yakin untuk hapus data ini ?')"><span class="glyphicon glyphicon-remove"></span></a></font>
                           </td>
                       </tr>
                       <?php
@@ -157,7 +157,7 @@
                           </td>
                           <td>
                               &nbsp;&nbsp;&nbsp;&nbsp;
-                              <span class="glyphicon glyphicon-remove"></span>
+                              <font color="red"><a href="?page=setting&&settingpage=rsDelete&&ft_id=<?= $ft_id ?>&&dp_id=<?= $dp_id ?>&&id=<?= $row12['rs_id'] ?>"onclick="return confirm('Anda yakin untuk hapus data ini ?')"><span class="glyphicon glyphicon-remove"></span></a></font>
                           </td>
                       </tr>
                       <?php
@@ -193,7 +193,7 @@
                           </td>
                           <td>
                               &nbsp;&nbsp;&nbsp;&nbsp;
-                              <span class="glyphicon glyphicon-remove"></span>
+                               <font color="red"><a href="?page=setting&&settingpage=rsDelete&&ft_id=<?= $ft_id ?>&&dp_id=<?= $dp_id ?>&&id=<?= $row21['rs_id'] ?>"onclick="return confirm('Anda yakin untuk hapus data ini ?')"><span class="glyphicon glyphicon-remove"></span></a></font>
                           </td>
                       </tr>
                       <?php
@@ -224,7 +224,7 @@
                           </td>
                           <td>
                               &nbsp;&nbsp;&nbsp;&nbsp;
-                              <span class="glyphicon glyphicon-remove"></span>
+                              <font color="red"><a href="?page=setting&&settingpage=rsDelete&&ft_id=<?= $ft_id ?>&&dp_id=<?= $dp_id ?>&&id=<?= $row22['rs_id'] ?>"onclick="return confirm('Anda yakin untuk hapus data ini ?')"><span class="glyphicon glyphicon-remove"></span></a></font>
                           </td>
                       </tr>
                       <?php
@@ -260,7 +260,7 @@
                           </td>
                           <td>
                               &nbsp;&nbsp;&nbsp;&nbsp;
-                              <span class="glyphicon glyphicon-remove"></span>
+                              <font color="red"><a href="?page=setting&&settingpage=rsDelete&&ft_id=<?= $ft_id ?>&&dp_id=<?= $dp_id ?>&&id=<?= $row31['rs_id'] ?>"onclick="return confirm('Anda yakin untuk hapus data ini ?')"><span class="glyphicon glyphicon-remove"></span></a></font>
                           </td>
                       </tr>
                       <?php
@@ -291,7 +291,7 @@
                           </td>
                           <td>
                               &nbsp;&nbsp;&nbsp;&nbsp;
-                              <span class="glyphicon glyphicon-remove"></span>
+                              <font color="red"><a href="?page=setting&&settingpage=rsDelete&&ft_id=<?= $ft_id ?>&&dp_id=<?= $dp_id ?>&&id=<?= $row32['rs_id'] ?>"onclick="return confirm('Anda yakin untuk hapus data ini ?')"><span class="glyphicon glyphicon-remove"></span></a></font>
                           </td>
                       </tr>
                       <?php
@@ -327,7 +327,7 @@
                           </td>
                           <td>
                               &nbsp;&nbsp;&nbsp;&nbsp;
-                              <span class="glyphicon glyphicon-remove"></span>
+                              <font color="red"><a href="?page=setting&&settingpage=rsDelete&&ft_id=<?= $ft_id ?>&&dp_id=<?= $dp_id ?>&&id=<?= $row41['rs_id'] ?>"onclick="return confirm('Anda yakin untuk hapus data ini ?')"><span class="glyphicon glyphicon-remove"></span></a></font>
                           </td>
                       </tr>
                       <?php
@@ -358,7 +358,7 @@
                           </td>
                           <td>
                               &nbsp;&nbsp;&nbsp;&nbsp;
-                              <span class="glyphicon glyphicon-remove"></span>
+                              <font color="red"><a href="?page=setting&&settingpage=rsDelete&&ft_id=<?= $ft_id ?>&&dp_id=<?= $dp_id ?>&&id=<?= $row42['rs_id'] ?>"onclick="return confirm('Anda yakin untuk hapus data ini ?')"><span class="glyphicon glyphicon-remove"></span></a></font>
                           </td>
                       </tr>
                       <?php
