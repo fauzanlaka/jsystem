@@ -70,17 +70,27 @@
                                     $i = 0 ;
                                     echo "<br>";
                                     while($rowDepartments = mysqli_fetch_array($departments)){
-                                        if($i < $num-1){
-                                        echo "OK";    
+                                        $idd = $rowDepartments[dp_id];
+                                        $coutSubject = mysqli_query($con, "SELECT count(rs_id) AS total FROM registerSubject WHERE dp_id='$idd'");
+                                        $rowSubject = mysqli_fetch_array($coutSubject);
+                                        if($i < $num-1){   
+                                        //Get total subject
+                                        echo "<b>";
+                                        echo $rowSubject[total]; 
+                                        echo "</b>";
                                         }
-                                        //$i = $i + 1;
                                         $i++;
                                         if($i < $num-1){
                                         echo "<br>";
                                         } 
                                     }   
                                 }else{
-                                    echo "OK";
+                                    //Get total subject
+                                    $coutSubject = mysqli_query($con, "SELECT count(rs_id) AS total FROM registerSubject WHERE ft_id='$rowFaculty[ft_id]'");
+                                    $rowSubject = mysqli_fetch_array($coutSubject);
+                                    echo "<b>";
+                                    echo $rowSubject['total'];   
+                                    echo "</b>";
                                 }
                         ?>
                     </a>

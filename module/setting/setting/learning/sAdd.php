@@ -41,9 +41,10 @@
                     while($row = mysqli_fetch_array($subject)){
                         $tc_id = $row['tc_id'];
                         $s_code = $row['s_code'];
-                        $t_fnameArab = $row['t_fnameRumi'];
+                        $t_fnameRumi = $row['t_fnameRumi'];
+                        $t_lnameRumi = $row['t_lnameRumi'];
                 ?>
-                    <option value="<?= $tc_id ?>"><?= $s_code ?> , <?= $t_fnameArab ?></option>
+                    <option value="<?= $tc_id ?>"><?= $s_code ?> , <?= $t_fnameRumi ?> - <?= $t_lnameRumi ?></option>
                 <?php
                     }
                 ?>
