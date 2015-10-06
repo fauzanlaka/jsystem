@@ -126,7 +126,7 @@
                           </td>
                           <td>
                               &nbsp;&nbsp;&nbsp;&nbsp;
-                              <font color="red"><a href="?page=setting&&settingpage=subjectDelete"><span class="glyphicon glyphicon-remove"></span></a></font>
+                              <font color="red"><a href="?page=setting&&settingpage=subjectDelete&&ft_id=<?= $ft_id ?>&&dp_id=<?= $dp_id ?>&&id=<?= $row11['rs_id'] ?>"><span class="glyphicon glyphicon-remove"></span></a></font>
                           </td>
                       </tr>
                       <?php
