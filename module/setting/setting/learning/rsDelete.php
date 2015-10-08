@@ -3,7 +3,7 @@
 	$ft_id = $_GET['ft_id'];
 	$dp_id = $_GET['dp_id'];
 	
-	$delete = mysqli_query($con, "DELETE FROM registersubject WHERE rs_id='$id'");
+	$delete = mysqli_query($con, "DELETE FROM registerSubject WHERE rs_id='$id'");
 ?>
 	<br>
         <div class="alert alert-dismissible alert-warning">

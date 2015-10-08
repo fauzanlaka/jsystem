@@ -11,17 +11,27 @@ function login(){
 	$strSQL = "SELECT * FROM user WHERE u_user = '".$strUsername."' and u_passwod = '".$strPassword."'";
 	$objQuery = mysqli_query($con,$strSQL);
 	$objResult = mysqli_fetch_array($objQuery);
-	if(!$objResult)
-	{
+	if(!$objResult){
+            $strSQL1 = "SELECT * FROM teachers WHERE t_username = '".$strUsername."' and t_password = '".$strPassword."'";
+            $objQuery1 = mysqli_query($con,$strSQL1);
+            $objResult1 = mysqli_fetch_array($objQuery1);
+            
+            echo "Tunggu sekejab...";
+
+            //*** Session
+            $_SESSION["UserID"] = $objResult1["t_id"];
+            $_SESSION["password"] = $objResult1["t_password"];
+            $_SESSION["status"] = $objResult1["t_status"];
+            session_write_close();
+            
+        }if(!$objResult){
+            //*** Go to Main page
+            header("location:main.php?page=main");
+            
 		echo "NO.POKOK atau PASSWORD salah ,";?> <a href="index.php">Login lagi</a>
 	<?php	exit();
-	}
-	else
-		{
+	}else{
                         echo "Tunggu sekejab...";
-			//*** Update Status Login
-			$sql = "UPDATE user SET LoginStatus = '1' , LastUpdate = NOW() WHERE u_id = '".$objResult["u_id"]."' ";
-			$query = mysqli_query($con,$sql);
 
 			//*** Session
 			$_SESSION["UserID"] = $objResult["u_id"];
