@@ -16,6 +16,7 @@
 	$t_email = mysqli_real_escape_string($con, $_POST['t_email']);
 	$t_username = mysqli_real_escape_string($con, $_POST['t_username']);
 	$t_password = mysqli_real_escape_string($con, $_POST['t_password']);
+        $t_status = "Pensyarah";
 
 	//Existing teacher data checking
 	$identitynumber = mysqli_query($con, "SELECT * FROM teachers WHERE t_cityzenid='$t_cityzenid'");
@@ -67,9 +68,9 @@
 				if(move_uploaded_file($_FILES["image"]["tmp_name"],"module/setting/teacher/image/".$_FILES["image"]["name"])){
 				$sql = mysqli_query($con, 
 					"INSERT INTO teachers 
-                                        (t_code,t_fnameArab,t_lnameArab,t_fnameRumi,t_lnameRumi,t_gender,t_cityzenid,t_housenumber,t_village,t_placenumber,t_subdistrict,t_district,t_province,t_postcode,t_telephone,t_email,t_username,t_password,t_image) 
+                                        (t_code,t_fnameArab,t_lnameArab,t_fnameRumi,t_lnameRumi,t_gender,t_cityzenid,t_housenumber,t_village,t_placenumber,t_subdistrict,t_district,t_province,t_postcode,t_telephone,t_email,t_username,t_password,t_image,t_status) 
                                         VALUES 
-                                        ('$tmp3','$t_fnameArab','$t_lnameArab','$t_fnameRumi','$t_lnameRumi','$t_gender','$t_cityzenid','$t_housenumber','$t_village','$t_placenumber','$t_subdistrict','$t_district','$t_province','$t_postcode','$t_telephone','$t_email','$t_username','$t_password','".$_FILES["image"]["name"]."')
+                                        ('$tmp3','$t_fnameArab','$t_lnameArab','$t_fnameRumi','$t_lnameRumi','$t_gender','$t_cityzenid','$t_housenumber','$t_village','$t_placenumber','$t_subdistrict','$t_district','$t_province','$t_postcode','$t_telephone','$t_email','$t_username','$t_password','".$_FILES["image"]["name"]."','$t_status')
                                         ");
                                 $q = mysqli_query($con, "SELECT * FROM teachers WHERE t_id = (SELECT MAX(t_id) FROM teachers)");
                                 $r = mysqli_fetch_array($q);
@@ -93,9 +94,9 @@
 			}else{
 			$sql = mysqli_query($con, 
                         "INSERT INTO teachers 
-	            	(t_code,t_fnameArab,t_lnameArab,t_fnameRumi,t_lnameRumi,t_gender,t_cityzenid,t_housenumber,t_village,t_placenumber,t_subdistrict,t_district,t_province,t_postcode,t_telephone,t_email,t_username,t_password) 
+	            	(t_code,t_fnameArab,t_lnameArab,t_fnameRumi,t_lnameRumi,t_gender,t_cityzenid,t_housenumber,t_village,t_placenumber,t_subdistrict,t_district,t_province,t_postcode,t_telephone,t_email,t_username,t_password,t_status) 
 	            	VALUES 
-	            	('$tmp3','$t_fnameArab','$t_lnameArab','$t_fnameRumi','$t_lnameRumi','$t_gender','$t_cityzenid','$t_housenumber','$t_village','$t_placenumber','$t_subdistrict','$t_district','$t_province','$t_postcode','$t_telephone','$t_email','$t_username','$t_password')
+	            	('$tmp3','$t_fnameArab','$t_lnameArab','$t_fnameRumi','$t_lnameRumi','$t_gender','$t_cityzenid','$t_housenumber','$t_village','$t_placenumber','$t_subdistrict','$t_district','$t_province','$t_postcode','$t_telephone','$t_email','$t_username','$t_password','$t_status')
 	            ");
                         $q = mysqli_query($con, "SELECT * FROM teachers WHERE t_id = (SELECT MAX(t_id) FROM teachers)");
                         $r = mysqli_fetch_array($q);

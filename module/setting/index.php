@@ -1,13 +1,30 @@
+<?php
+    $status = $_SESSION["status"];
+    if($status == "Pensyarah"){
+?>
+<div class="btn-group btn-group-justified">
+  <a href="?page=setting&&settingpage=score" class="btn btn-default"><span class="glyphicon glyphicon-duplicate"></span> Pengurusan markah</a>
+</div>
+<?php
+    }else{
+?>
 <div class="btn-group btn-group-justified">
   <a href="?page=setting&&settingpage=subject" class="btn btn-default"><span class="glyphicon glyphicon-list"></span> Mata kuliah</a>
   <a href="?page=setting&&settingpage=teacher" class="btn btn-default"><span class="glyphicon glyphicon-list"></span> Data pensyarah</a>
+  <a href="?page=setting&&settingpage=score" class="btn btn-default"><span class="glyphicon glyphicon-list"></span> Pengurusan markah</a>
   <a href="?page=setting&&settingpage=setting" class="btn btn-default"><span class="glyphicon glyphicon-cog"></span> SETTING</a>
 </div>
-
+<?php
+    }
+?>
 <?php
     $settingpage = $_GET['settingpage']; // To get the page
 
     switch ($settingpage) {
+        //Main
+        case 'main':
+            include 'module/setting/teacher/index.php';
+            break;
         //Teacher
         case 'teacher':
             include 'module/setting/teacher/list.php';
@@ -82,6 +99,19 @@
             break;
         case 'rsAdd':
             include 'module/setting/setting/learning/rsAdd.php';
+            break;
+        case 'sAdd':
+            include 'module/setting/setting/learning/sAdd.php';
+            break;
+        case 'sAddSave':
+            include 'module/setting/setting/learning/sAddSave.php';
+            break;
+        case 'rsDelete':
+            include 'module/setting/setting/learning/rsDelete.php';
+            break;
+        //Score
+        case 'score':
+            include 'module/setting/score/main.php';
             break;
     }
 ?>

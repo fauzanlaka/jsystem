@@ -1,11 +1,28 @@
 <?php
-    //*** Get User Login
-    $id = $_SESSION['UserID'];
-    $strSQL = "SELECT * FROM user WHERE u_id = '$id'";
-    $objQuery = mysqli_query($con,$strSQL);
-    $objResult = mysqli_fetch_array($objQuery,MYSQLI_ASSOC);
-    
     $status = $_SESSION["status"];
+    if($status == 'Pensyarah'){
+        //*** Get User Login
+        $id = $_SESSION['UserID'];
+        $strSQL = "SELECT * FROM teachers WHERE t_id = '$id'";
+        $objQuery = mysqli_query($con,$strSQL);
+        $objResult = mysqli_fetch_array($objQuery,MYSQLI_ASSOC);  
+        
+        $code = $objResult['t_code'];
+        $fname = $objResult['t_fnameRumi'];
+        $lname = $objResult['t_lnameRumi'];
+    }else{
+        //*** Get User Login
+        $id = $_SESSION['UserID'];
+        $strSQL = "SELECT * FROM user WHERE u_id = '$id'";
+        $objQuery = mysqli_query($con,$strSQL);
+        $objResult = mysqli_fetch_array($objQuery,MYSQLI_ASSOC);
+        
+        $code = $objResult['u_codename'].$objResult['u_codenumber'];
+        $fname = $objResult['u_fname'];
+        $lname = $objResult['u_lname'];
+    }
+    
+
 ?>
 <div class="panel panel-primary">
   <div class="panel-heading">
@@ -14,9 +31,9 @@
       </table></h3>
   </div>
   <div class="panel-body">
-      <p>KOD : <b><?= $objResult['u_codename']; ?><?= $objResult['u_codenumber']; ?></b> </p> 
-      <p>Nama-Baka : <b><?= $objResult['u_fname']; ?> - <?= $objResult['u_lname']; ?></b></p> 
-      <p>Status Pengguna : <b><?= $objResult['u_status']; ?></b></p> 
+      <p>KOD : <b><?= $code ?></b> </p> 
+      <p>Nama-Baka : <b><?= $fname ?> - <?= $lname ?></b></p> 
+      <p>Status Pengguna : <b><?= $status ?></b></p> 
   </div>
 </div>
 
