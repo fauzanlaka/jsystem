@@ -116,5 +116,8 @@
         case 'studentSearch':
             include 'module/setting/score/studentSearch.php';
             break;
+        case 'scoreSave':
+            include 'module/setting/score/scoreSave.php';
+            break;
     }
 ?>

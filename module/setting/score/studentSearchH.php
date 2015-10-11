@@ -48,7 +48,6 @@
                          WHERE s.class='$class' and s.ft_id='$faculty' and s.dp_id='$department' and ss.ss_year='$cyear' and ss.s_id='$subject' ORDER BY s.student_id");    
     }
  ?>
-<br>
 <div class='pull-left'>
     <a href="?page=setting&&settingpage=score" class="btn btn-primary btn-sm"><span class='glyphicon glyphicon-chevron-left'></span> BACK</a>
 </div>
@@ -84,7 +83,7 @@
                 $fnameJ = str_replace("\'", "&#39;", $rowScore["firstname_jawi"]);
                 $lnameJ = str_replace("\'", "&#39;", $rowScore["lastname_jawi"]);
                 
-                echo '<tr>';;
+                echo '<tr>';
                 echo "<td align='center'>{$student_id}<input type='hidden' name='id[$i]' value='{$ssId}' /></td>";
                 echo "<td>{$fnameR} - {$lnameR}</td>";
                 echo "<td align='right'>{$fnameJ} - {$lnameJ}</td>";

@@ -98,7 +98,7 @@
          <div class="form-group">  
             <div class="col-lg-10 col-lg-offset-5">
                 <button type="reset" class="btn btn-default btn-sm">BATAL</button>
-                <button type="submit" class="btn btn-primary btn-sm" name="save">SIMPAN</button>
+                <button type="submit" class="btn btn-primary btn-sm" name="save">SEARCH</button>
             </div>
         </div>
         
