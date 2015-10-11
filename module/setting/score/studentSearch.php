@@ -69,7 +69,7 @@
             <td align='center'><b>NO.POKOK</b></td>
             <td align='center'><b>NAMA - NASAB</b></td>
             <td align='center'><b>نام - نسب</b></td>
-            <td align='center'><b>MARKAH</b></td>
+            <td align='center' width='10px'><b>MARKAH</b></td>
         </tr>
     </thead>
     <tbody>
@@ -88,7 +88,7 @@
                 echo "<td align='center'>{$student_id}<input type='hidden' name='id[$i]' value='{$ssId}' /></td>";
                 echo "<td>{$fnameR} - {$lnameR}</td>";
                 echo "<td align='right'>{$fnameJ} - {$lnameJ}</td>";
-                echo "<td><input type='text' name='score[$i]' value='{$sScore}' class='form-control input-sm'/></td>";
+                echo "<td width='10px'><input type='text' name='score[$i]' value='{$sScore}' class='form-control input-sm'/></td>";
                 echo '</tr>';
                 ++$i;
              }

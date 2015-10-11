@@ -18,13 +18,17 @@
 	$t_password = mysqli_real_escape_string($con, $_POST['t_password']);
         $t_status = "Pensyarah";
 
-	//Existing teacher data checking
+	//Existing teacher data checking in teacher table
 	$identitynumber = mysqli_query($con, "SELECT * FROM teachers WHERE t_cityzenid='$t_cityzenid'");
 	$row1 = mysqli_fetch_array($identitynumber);
         
-        //Existing teacher username checking
+        //Existing teacher username checking in teacher table
 	$username = mysqli_query($con, "SELECT * FROM teachers WHERE t_username='$t_username'");
 	$row2 = mysqli_fetch_array($username);
+        
+        //Existing teacher username checking in teacher table
+	$username2 = mysqli_query($con, "SELECT * FROM user WHERE u_user='$t_username'");
+	$row3 = mysqli_fetch_array($username2);
 
 	//Creat teacher code(t_code)
 	$t_code = mysqli_query($con, "SELECT * FROM teachers WHERE t_id = (SELECT max(t_id) FROM teachers)");
@@ -61,6 +65,15 @@
           <button type="button" class="close" data-dismiss="alert">×</button>
           <p>Username sudah di guna</p>
         </div>
+<?php
+        include 'module/setting/teacher/add.php';
+        }elseif($row3[0] > 0){
+?>
+        <br>
+        <div class="alert alert-dismissible alert-danger">
+          <button type="button" class="close" data-dismiss="alert">×</button>
+          <p>Username sudah di guna</p>
+        </div>      
 <?php
 	include 'module/setting/teacher/add.php';
         }else{

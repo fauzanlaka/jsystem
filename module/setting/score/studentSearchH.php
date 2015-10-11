@@ -68,7 +68,7 @@
             <td align='center'><b>NO.POKOK</b></td>
             <td align='center'><b>NAMA - NASAB</b></td>
             <td align='center'><b>نام - نسب</b></td>
-            <td align='center'><b>MARKAH</b></td>
+            <td align='center' width='15px'><b>MARKAH</b></td>
         </tr>
     </thead>
     <tbody>
