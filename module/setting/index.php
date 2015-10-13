@@ -11,7 +11,7 @@
 <div class="btn-group btn-group-justified">
   <a href="?page=setting&&settingpage=subject" class="btn btn-default"><span class="glyphicon glyphicon-list"></span> Mata kuliah</a>
   <a href="?page=setting&&settingpage=teacher" class="btn btn-default"><span class="glyphicon glyphicon-list"></span> Data pensyarah</a>
-  <a href="?page=setting&&settingpage=score" class="btn btn-default"><span class="glyphicon glyphicon-list"></span> Pengurusan markah</a>
+  <a href="?page=setting&&settingpage=specialScore" class="btn btn-default"><span class="glyphicon glyphicon-list"></span> Pengurusan markah</a>
   <a href="?page=setting&&settingpage=setting" class="btn btn-default"><span class="glyphicon glyphicon-cog"></span> SETTING</a>
 </div>
 <?php
@@ -118,6 +118,15 @@
             break;
         case 'scoreSave':
             include 'module/setting/score/scoreSave.php';
+            break;
+        case 'specialScore':
+            include 'module/setting/score/specialScore.php';
+            break;
+        case 'specialStudentSearch':
+            include 'module/setting/score/specialStudentSearch.php';
+            break;
+        case 'specialScoreSave':
+            include 'module/setting/score/specialScoreSave.php';
             break;
     }
 ?>

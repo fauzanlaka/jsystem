@@ -33,7 +33,7 @@
             <div class="col-lg-7">
                 <select name="tc_id" id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" required title="Pilih...">
                     
-                    <?php
+                <?php
                     $subject = mysqli_query($con, "SELECT tc.*,s.*,t.* FROM teaching tc 
                                             INNER JOIN subject s ON tc.s_id=s.s_id
                                             INNER JOIN teachers t ON tc.t_id=t.t_id
