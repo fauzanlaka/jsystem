@@ -23,7 +23,7 @@
     switch ($settingpage) {
         //Main
         case 'main':
-            include 'module/setting/teacher/index.php';
+            include 'module/setting/setting/list.php';
             break;
         //Teacher
         case 'teacher':

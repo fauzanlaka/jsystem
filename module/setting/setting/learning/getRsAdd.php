@@ -59,10 +59,10 @@
                               INNER JOIN teachers t ON rs.t_id=t.t_id
                               WHERE rs.ft_id='$ft_id' and rs.rs_class='2' and rs.rs_term='2'");
     }else{
-        $get22 = mysqli_query($con, "SELECT * FROM registerSubject 
+        $get22 = mysqli_query($con, "SELECT * FROM registerSubject rs
                               INNER JOIN subject s ON rs.s_id=s.s_id
                               INNER JOIN teachers t ON rs.t_id=t.t_id
-                              WHERE rs.ft_id='$ft_id' and rs.dp_id='$dp_id' and rs.rs_class='2' and rs.rs_term='2'");    
+                              WHERE rs.ft_id='$ft_id' and rs.dp_id='$dp_id'  and rs.rs_class='2' and rs.rs_term='2'");    
     }
     //-----------------------------------------------------------------------------------------------
     
