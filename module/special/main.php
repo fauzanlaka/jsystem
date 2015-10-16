@@ -78,7 +78,7 @@
 
                 <div class="col-lg-2">
                      <select name="department" class="form-control input-sm">
-                         <option>Jurusan</option>
+                         <option value="0">Jurusan</option>
                          <?php
                             while($rowDepartment = mysqli_fetch_array($department)){
                          ?>

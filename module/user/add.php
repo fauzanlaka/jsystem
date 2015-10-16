@@ -50,7 +50,7 @@
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Gambar :</label>
                     <div class="col-lg-3">
-                      <input type="file" name="image" class="form-control input-sm">
+                      <input type="file" name="image[]" class="form-control input-sm">
                     </div>
                     <div class="col-lg-3">
                         <p class="text-warning">*Bisa di tinggal</p>
