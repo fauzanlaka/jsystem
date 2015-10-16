@@ -96,7 +96,7 @@
       
       <div class="form-group">
             <div class="col-lg-10 col-lg-offset-6">
-                <button type="submit" class="btn btn-primary btn-sm" name="save">SIMPAN</button>
+                <button type="submit" class="btn btn-primary btn-sm" name="save">MENCARI</button>
             </div>
       </div>
       

@@ -1,6 +1,6 @@
 <?php    
     $status = $_SESSION["status"];
-    if($status == 'Amir kuliah'){
+    if($status == 'Amir kuliah' or $status == 'Pensyarah'){
 ?>
 
 <div class="btn-group btn-group-justified">

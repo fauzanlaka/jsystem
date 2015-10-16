@@ -126,7 +126,7 @@
 ?>
 <a href="?page=setting&&settingpage=l" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-chevron-left"></span> BACK</a>
 <br><br>
-<div class="panel panel-success">
+<div class="panel panel-info">
   <div class="panel-heading">
     <h3 class="panel-title">
         <b>

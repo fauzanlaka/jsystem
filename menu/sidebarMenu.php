@@ -44,6 +44,7 @@
     <li role="presentation" class="active"><a href="#">SISTEM IDARAH</a></li>
     <li role="presentation"><a href="?page=student&&studentpage=listed"><span class='glyphicon glyphicon-user'></span> Data mahasiswa / داتا مهاسيسوا</a></li>
     <li role="presentation"><a href="?page=activity&&activitypage=history"><span class='glyphicon glyphicon-tasks'></span> Aktivitas / اكتيويتس</a></li>
+    <li role="presentation"><a href="?page=setting&&settingpage=score"><span class='glyphicon glyphicon-cog'></span> Perkuliahan / فركليهن</a></li>
     <li role="presentation"><a href="#"><span class='glyphicon glyphicon-tasks'></span> Borang / Form</a></li>
     <li role="presentation"><a href="#"><span class='glyphicon glyphicon-comment'></span> Peraturan</a></li>
     <li role="presentation"><a href="#"><span class='glyphicon glyphicon-compressed'></span> Struktur</a></li>
@@ -60,18 +61,32 @@
     <li role="presentation"><a href="?page=report&&reportpage=main"><span class='glyphicon glyphicon-open-file'></span> Laporan / لافوران</a></li>
     <li role="presentation"><a href="?page=activity&&activitypage=add"><span class='glyphicon glyphicon-tasks'></span> Aktivitas / اكتيويتس</a></li>
     <li role="presentation"><a href="?page=post&&postpage=main"><span class='glyphicon glyphicon-tasks'></span> Post maklumat</a></li>
+    <li role="presentation"><a href="?page=rs&&rspage=main"><span class='glyphicon glyphicon-tasks'></span> Special menu</a></li>
     <li role="presentation"><a href="#"><span class='glyphicon glyphicon-comment'></span> Peraturan</a></li>
     <li role="presentation"><a href="#"><span class='glyphicon glyphicon-compressed'></span> Struktur</a></li>
     <li role="presentation"><a href="#"><span class='glyphicon glyphicon-stats'></span> Statistik mahasiswa</a></li>
 </ul>
 <?php 
+    }elseif($status == 'Pensyarah'){
+?>
+<ul class="nav nav-pills nav-stacked">
+    <li role="presentation" class="active"><a href="#">SISTEM IDARAH</a></li>
+    <li role="presentation"><a href="?page=student&&studentpage=listed"><span class='glyphicon glyphicon-user'></span> Data mahasiswa / داتا مهاسيسوا</a></li>
+    <li role="presentation"><a href="?page=setting&&settingpage=score"><span class='glyphicon glyphicon-cog'></span> Perkuliahan / فركليهن</a></li>
+    <li role="presentation"><a href="#"><span class='glyphicon glyphicon-briefcase'></span> Jadual guru</a></li>
+    <li role="presentation"><a href="#"><span class='glyphicon glyphicon-tasks'></span> Borang / Form</a></li>
+    <li role="presentation"><a href="#"><span class='glyphicon glyphicon-comment'></span> Peraturan</a></li>
+    <li role="presentation"><a href="#"><span class='glyphicon glyphicon-compressed'></span> Struktur</a></li>
+</ul>
+<?php
+    //If status is "Pengurus data"
     }else{
 ?>
 <ul class="nav nav-pills nav-stacked">
     <li role="presentation" class="active"><a href="#">SISTEM IDARAH</a></li>
     <li role="presentation"><a href="?page=student&&studentpage=list"><span class='glyphicon glyphicon-user'></span> Data mahasiswa / داتا مهاسيسوا</a></li>
     <li role="presentation"><a href="?page=register&&registerpage=main"><span class='glyphicon glyphicon-list-alt'></span> Pendaftaran /فندفتران</a></li>
-    <li role="presentation"><a href="?page=setting&&settingpage=main"><span class='glyphicon glyphicon-cog'></span> Perkuliahan / فركليهن</a></li>
+    <li role="presentation"><a href="?page=setting&&settingpage=specialScore"><span class='glyphicon glyphicon-cog'></span> Perkuliahan / فركليهن</a></li>
     <li role="presentation"><a href="#"><span class='glyphicon glyphicon-briefcase'></span> Jadual guru</a></li>
     <li role="presentation"><a href="#"><span class='glyphicon glyphicon-tasks'></span> Borang / Form</a></li>
     <li role="presentation"><a href="#"><span class='glyphicon glyphicon-comment'></span> Peraturan</a></li>

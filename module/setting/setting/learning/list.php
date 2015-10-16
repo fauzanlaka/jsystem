@@ -2,7 +2,7 @@
     $faculty = mysqli_query($con, "SELECT * FROM fakultys");
 ?>
 <br>
-<div class="panel panel-success">
+<div class="panel panel-info">
   <div class="panel-heading">
     <h3 class="panel-title">PERKULIAHAN</h3>
   </div>

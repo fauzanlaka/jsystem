@@ -85,6 +85,9 @@
                             case 'post':
                                 include 'module/post/index.php';
                                 break;
+                            case 'rs':
+                                include 'module/special/index.php';
+                                break;
                         }
             ?>
          

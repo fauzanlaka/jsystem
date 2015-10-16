@@ -50,6 +50,7 @@
 
  ?>
 <br>
+<div class="well">
 <div class='pull-left'>
     <a href="?page=setting&&settingpage=specialScore" class="btn btn-primary btn-sm"><span class='glyphicon glyphicon-chevron-left'></span> BACK</a>
 </div>
@@ -108,4 +109,6 @@
         </div>
         <?php
             echo "</form>"; 
-        ?>
+        ?>    
+</div>
+
