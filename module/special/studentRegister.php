@@ -38,14 +38,25 @@
      */
     
     //Get student data for register
-    $student = mysqli_query($con, "SELECT * FROM students
-                            WHERE class='$class' and ft_id='$faculty' and dp_id='$department'
-                            ORDER BY student_id
-                            ");
+    if($department == 0){
+        $student = mysqli_query($con, "SELECT * FROM students
+                                WHERE class='$class' and ft_id='$faculty'
+                                ORDER BY student_id
+                                ");   
+    }else{
+        $student = mysqli_query($con, "SELECT * FROM students
+                                    WHERE class='$class' and ft_id='$faculty' and dp_id='$department'
+                                    ORDER BY student_id
+                                    ");    
+    }
+    
+    $sql = mysqli_query($con, "SELECT * FROM studentSubject WHERE ss_term='$term' and ss_year='$year' ");
+    $get = mysqli_fetch_array($sql);
+    $id = $get['st_id'];
 ?>
 <br>
 <div class='well'>
-    <form class="form-horizontal" action="?page=rs&&rspage=studentRegisterSave" enctype="multipart/form-data" method="POST">
+    <form class="form-horizontal" action="?page=rs&&rspage=studentRegisterSave&&id=<?= $id ?>&&y=<?= $year ?>&&t=<?= $term ?>" enctype="multipart/form-data" method="POST">
         <table class="table table-striped table-hover table-bordered">
             <thead>
               <tr>
@@ -58,13 +69,9 @@
                     $iStu = 0 ;
                     while($rowStudent = mysqli_fetch_array($student)){
                         $st_id = $rowStudent['st_id'];
-                        echo "<input type='hidden' name='st_id[$iStu]' value='{$st_id}'";
-                        echo "<input type='hidden' name='term[$iStu]' value='{$term}'";
-                        echo "<input type='hidden' name='year[$iStu]' value='{$year}'";
-
                         echo "<tr>";
                             echo "<td align='center'>
-                                    {$rowStudent['student_id']}
+                                    {$rowStudent['student_id']}/{$st_id}
                                     <input type='hidden' name='st_id[$i]' value='{$st_id}'>
                                   </td>";
                             echo "<td>";
@@ -104,6 +111,7 @@
                 ?>
             </tbody>
         </table>
+        
         <div class="form-group">
             <div class="col-lg-10 col-lg-offset-5">
                 <button type="reset" class="btn btn-default btn-sm">BATAL</button>
