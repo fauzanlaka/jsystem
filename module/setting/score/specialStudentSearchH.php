@@ -1,5 +1,5 @@
 <?php
-    $year = $_POST['year'];
+    $year = $_POST['year']; //Year of studenSubject table
     $faculty = $_POST['faculty'];
     $department = $_POST['department'];
     $subject = $_POST['subject'];

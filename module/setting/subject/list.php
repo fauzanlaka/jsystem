@@ -1,6 +1,6 @@
 <br>
 <div class="pull-left">
-    <a href="?page=setting&&settingpage=subjectAdd" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-plus-sign"></span> TAMBAH MATA KULIAH</a>
+    <a href="?page=setting&&settingpage=subjectAdd" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-plus-sign"></span> TAMBAH</a>
 </div>
 
 <div class="pull-right">
@@ -23,7 +23,7 @@
     // Here we have the total row count
     $rows = $row[0];
     // This is the number of results we want displayed per page
-    $page_rows = 10;
+    $page_rows = 9;
     // This tells us the page number of our last page
     $last = ceil($rows/$page_rows);
     // This makes sure $last cannot be less than 1
@@ -95,7 +95,7 @@
         <td align="center"><b>NAMA MATA KULIAH</b></td>
         <td align="center"><b>NAMA MATA KULIAH</b></td>
         <td align="center"><b>JENIS</b></td>
-        <td align="center"><b>UBAH | HAPUS</b></td>
+        <td align="center"><b>UBAH</b></td>
       </tr>
     </thead>
     <tbody>
@@ -112,7 +112,7 @@
           <td align='left'><?= $s_rumiName ?></td>
           <td align="right"><?= $s_arabName ?></td>
           <td align='center'><?= $s_type ?></td>
-          <td align="center"><a href="?page=setting&&settingpage=subjectEdit&&id=<?= $id ?>" ><span class="glyphicon glyphicon-edit"></span></a> | <a href="?page=setting&&settingpage=deleteSubject&&id=<?= $id ?>" onclick="return confirm('Anda yakin untuk hapus data ini ?')"><span class="glyphicon glyphicon-remove"></span></a></td>
+          <td align="center"><a href="?page=setting&&settingpage=subjectEdit&&id=<?= $id ?>" ><span class="glyphicon glyphicon-edit"></span></a></td>
         </tr>
 <?php
     }

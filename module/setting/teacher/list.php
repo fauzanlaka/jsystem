@@ -1,6 +1,6 @@
 <br>
 <div class="pull-left">
-    <a href="?page=setting&&settingpage=teacherAdd" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-plus-sign"></span> TAMBAH PENSYARAH</a>
+    <a href="?page=setting&&settingpage=teacherAdd" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-plus-sign"></span> TAMBAH</a>
 </div>
 <div class="pull-right">
         <form class="navbar-form" role="search" action="?page=setting&&settingpage=searchTeacher" method="post">
@@ -22,7 +22,7 @@
     // Here we have the total row count
     $rows = $row[0];
     // This is the number of results we want displayed per page
-    $page_rows = 10;
+    $page_rows = 9;
     // This tells us the page number of our last page
     $last = ceil($rows/$page_rows);
     // This makes sure $last cannot be less than 1
@@ -116,7 +116,7 @@
           <td align="right"><?= strtoupper($fname_j) ?> - <?= strtoupper($lname_j) ?></td>
           <td><?= $faculty ?></td>
           <td align="center"><?= $telephone ?></td>
-          <td align="center"><a href="?page=setting&&settingpage=editTeacher&&id=<?= $id ?>" ><span class="glyphicon glyphicon-edit"></span></a> / <a href="?page=setting&&settingpage=deleteTeacher&&id=<?= $id ?>" onclick="return confirm('Anda yakin untuk hapus data ini ?')"><span class="glyphicon glyphicon-remove"></span></a></td>
+          <td align="center"><a href="?page=setting&&settingpage=editTeacher&&id=<?= $id ?>" ><span class="glyphicon glyphicon-edit"></span></a></td>
         </tr>
 <?php
     }

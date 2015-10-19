@@ -5,7 +5,7 @@
 ?>
 <br>
 <div class="pull-left">
-    <a href="?page=setting&&settingpage=subjectAdd" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-plus-sign"></span> TAMBAH MATA KULIAH</a>
+    <a href="?page=setting&&settingpage=subjectAdd" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-plus-sign"></span> TAMBAH</a>
 </div>
 <div class="pull-right">
         <form class="navbar-form" role="search" action="?page=setting&&settingpage=searchSubject" method="post">
@@ -24,7 +24,7 @@
         <td align="center"><b>NAMA MATA KULIAH</b></td>
         <td align="center"><b>NAMA MATA KULIAH</b></td>
         <td align="center"><b>JENIS</b></td>
-        <td align="center"><b>UBAH | HAPUS</b></td>
+        <td align="center"><b>UBAH</b></td>
       </tr>
     </thead>
     <tbody>
@@ -41,7 +41,7 @@
           <td align='left'><?= $s_rumiName ?></td>
           <td align="right"><?= $s_arabName ?></td>
           <td align='center'><?= $s_type ?></td>
-          <td align="center"><a href="?page=setting&&settingpage=subjectEdit&&id=<?= $id ?>" ><span class="glyphicon glyphicon-edit"></span></a> | <a href="?page=setting&&settingpage=deleteSubject&&id=<?= $id ?>" onclick="return confirm('Anda yakin untuk hapus data ini ?')"><span class="glyphicon glyphicon-remove"></span></a></td>
+          <td align="center"><a href="?page=setting&&settingpage=subjectEdit&&id=<?= $id ?>" ><span class="glyphicon glyphicon-edit"></span></a></td>
         </tr>
 <?php
     }

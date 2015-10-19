@@ -15,7 +15,13 @@
 ?>
 <br>
 <div class='well'>
-    <h4><span class="glyphicon glyphicon-edit"></span> <b>UBAH DATA MATA KULIAH</b></h4>
+    <div class="pull-left">
+        <h4><span class="glyphicon glyphicon-book"></span> <b>UBAH MATA KULIAH</b></h4>
+    </div>
+    <div class="pull-right">
+        <a href="?page=setting&&settingpage=subject"><button type="submit" class="btn btn-primary btn-sm" name="save"><span class="glyphicon glyphicon-chevron-left"></span> KEMBALI</button></a>
+    </div>
+    <br><br>
     <hr>
     <form class="form-horizontal" action="?page=setting&&settingpage=saveEditSubject&&id=<?= $id ?>" enctype="multipart/form-data" method="POST">
      
@@ -96,12 +102,13 @@
                 </select>
            </div>
        </div>
-        
-       <div class="form-group">
-            <div class="col-lg-10 col-lg-offset-10">
+       
+        <div class="pull-right">
+            <div class="form-group">
                 <button type="submit" class="btn btn-primary btn-sm" name="save">SIMPAN</button>
             </div>
-       </div>
-        
+        </div>  
+        <br>
+
     </form>
 </div>

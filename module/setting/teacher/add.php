@@ -1,6 +1,13 @@
 <br>
 <div class='well'>
-<h4><span class="glyphicon glyphicon-user"></span> <b>TAMBAH PENSYARAH</b></h4>
+    <div class="pull-left">
+        <h4><span class="glyphicon glyphicon-user"></span> <b>TAMBAH PENSYARAH</b></h4>
+    </div>
+    
+    <div class="pull-right">
+        <a href="?page=setting&&settingpage=teacher"><button type="submit" class="btn btn-primary btn-sm" name="save"><span class="glyphicon glyphicon-chevron-left"></span> KEMBALI</button></a>
+    </div>
+    <br><br>
     <hr>
     <form class="form-horizontal" action="?page=setting&&settingpage=saveAdd" enctype="multipart/form-data" method="POST">
                 <div class='pull-right'>
