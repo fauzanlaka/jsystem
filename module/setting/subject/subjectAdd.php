@@ -38,7 +38,7 @@
         <div class="form-group">
             <label class="col-lg-2 control-label">MATA KULIAH :</label>
             <div class="col-lg-5">
-                <input type="text" class="form-control input-sm" placeholder="ARAB" name="s_arabName">
+                <input type="text" class="form-control input-sm" placeholder="JAWI" name="s_arabName">
             </div>
        </div>
         
@@ -89,11 +89,9 @@
            </div>
        </div>
        
-        <div class="pull-right">
-            <div class="form-group">   
-                <button type="reset" class="btn btn-default btn-sm">BATAL</button>
-                <button type="submit" class="btn btn-primary btn-sm" name="save">SIMPAN</button>
-            </div>    
+        <div class="pull-right">  
+            <button type="reset" class="btn btn-default btn-sm">BATAL</button>
+            <button type="submit" class="btn btn-primary btn-sm" name="save">SIMPAN</button>
         </div>
         <br><br>
     </form>

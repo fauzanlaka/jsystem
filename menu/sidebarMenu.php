@@ -60,9 +60,9 @@
     <li role="presentation"><a href="?page=payment&&paymentpage=main"><span class='glyphicon glyphicon-usd'></span> Pembayaran / فمبياران</a></li>
     <li role="presentation"><a href="?page=report&&reportpage=main"><span class='glyphicon glyphicon-open-file'></span> Laporan / لافوران</a></li>
     <li role="presentation"><a href="?page=activity&&activitypage=add"><span class='glyphicon glyphicon-tasks'></span> Aktivitas / اكتيويتس</a></li>
+    <li role="presentation"><a href="?page=setting&&settingpage=specialScore"><span class='glyphicon glyphicon-cog'></span> Perkuliahan / فركليهن</a></li>
     <li role="presentation"><a href="?page=post&&postpage=main"><span class='glyphicon glyphicon-tasks'></span> Post maklumat</a></li>
-    <li role="presentation"><a href="?page=rs&&rspage=main"><span class='glyphicon glyphicon-tasks'></span> Special menu</a></li>
-    <li role="presentation"><a href="#"><span class='glyphicon glyphicon-comment'></span> Peraturan</a></li>
+    <li role="presentation"><a href="?page=rs&&rspage=main"><span class='glyphicon glyphicon-flag'></span> Special menu</a></li>
     <li role="presentation"><a href="#"><span class='glyphicon glyphicon-compressed'></span> Struktur</a></li>
     <li role="presentation"><a href="#"><span class='glyphicon glyphicon-stats'></span> Statistik mahasiswa</a></li>
 </ul>

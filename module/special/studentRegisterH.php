@@ -43,7 +43,6 @@
                             ORDER BY student_id
                             ");
 ?>
-<br>
 <div class='well'>
     <form class="form-horizontal" action="?page=rs&&rspage=studentRegisterSave" enctype="multipart/form-data" method="POST">
         <table class="table table-striped table-hover table-bordered">
@@ -58,9 +57,6 @@
                     $iStu = 0 ;
                     while($rowStudent = mysqli_fetch_array($student)){
                         $st_id = $rowStudent['st_id'];
-                        echo "<input type='hidden' name='st_id[$iStu]' value='{$st_id}'";
-                        echo "<input type='hidden' name='term[$iStu]' value='{$term}'";
-                        echo "<input type='hidden' name='year[$iStu]' value='{$year}'";
 
                         echo "<tr>";
                             echo "<td align='center'>

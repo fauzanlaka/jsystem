@@ -38,14 +38,15 @@
     if($kelas == $fordth){ $cnow = '4'; }
 
     //Get student data for update score
+    //Get student data for update score
     if($department == "0"){
     $score = mysqli_query($con, "SELECT s.*,ss.* FROM students s
                          INNER JOIN studentSubject ss ON s.st_id=ss.st_id
-                         WHERE s.income_year='$year' and s.ft_id='$faculty' and ss.ss_year='$cyear' and ss.s_id='$subject' ORDER BY s.student_id");
+                         WHERE s.ft_id='$faculty' and ss.ss_year='$cyear' and ss.s_id='$subject' ORDER BY s.student_id");
     }else{
     $score = mysqli_query($con, "SELECT s.*,ss.* FROM students s
                          INNER JOIN studentSubject ss ON s.st_id=ss.st_id
-                         WHERE s.income_year='$year' and s.ft_id='$faculty' and s.dp_id='$department' and ss.ss_year='$cyear' and ss.s_id='$subject' ORDER BY s.student_id");    
+                         WHERE s.ft_id='$faculty' and s.dp_id='$department' and ss.ss_year='$cyear' and ss.s_id='$subject' ORDER BY s.student_id");    
     }
 
  ?>
@@ -55,9 +56,9 @@
 <br>
 <br>
 <?php if($department == ""){ ?>
-<p><strong><?= $rowFaculty['ft_name'] ?> , Angkatan : <?= $year ?> , <?= $rowSubject['s_code'] ?> : <?= $rowSubject['s_rumiName'] ?></p>
+<p><strong><?= $rowFaculty['ft_name'] ?> , Tahun pengajian : <?= $year ?> , <?= $rowSubject['s_code'] ?> : <?= $rowSubject['s_rumiName'] ?></p>
 <?php }else{ ?>
-<p><strong><?= $rowFaculty['ft_name'] ?> , <?= $rowDepartment['dp_name'] ?> , Angkatan : <?= $year ?> , <?= $rowSubject['s_code'] ?> : <?= $rowSubject['s_rumiName'] ?></p>
+<p><strong><?= $rowFaculty['ft_name'] ?> , <?= $rowDepartment['dp_name'] ?> , Tahun pengajian : <?= $year ?> , <?= $rowSubject['s_code'] ?> : <?= $rowSubject['s_rumiName'] ?></p>
 <?php } ?>
 
 <?php

@@ -10,5 +10,8 @@
             case 'studentRegister':
                 include 'module/special/studentRegister.php';
                 break;
+            case 'studentRegisterSave':
+                include 'module/special/studentRegisterSave.php';
+                break;
         }
 ?>

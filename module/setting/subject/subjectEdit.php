@@ -44,12 +44,18 @@
             <div class="col-lg-5">
                 <input type="text" class="form-control input-sm" value='<?= $s_rumiName ?>' name="s_rumiName">
             </div>
+            <div class="col-lg-2">
+                <font color="orange"><b>RUMI</b></font>
+            </div>
        </div>
         
         <div class="form-group">
             <label class="col-lg-2 control-label">MATA KULIAH :</label>
             <div class="col-lg-5">
                 <input type="text" class="form-control input-sm" value='<?= $s_arabName ?>' name="s_arabName">
+            </div>
+            <div class="col-lg-2">
+                <font color="orange"><b>JAWI</b></font>
             </div>
        </div>
         
@@ -58,12 +64,18 @@
             <div class="col-lg-5">
                 <input type="text" class="form-control input-sm" value='<?= $s_engName ?>' name="s_engName">
             </div>
+            <div class="col-lg-2">
+                <font color="orange"><b>INGRIS</b></font>
+            </div>
        </div>
         
         <div class="form-group">
             <label class="col-lg-2 control-label">MATA KULIAH :</label>
             <div class="col-lg-5">
                 <input type="text" class="form-control input-sm" value='<?= $s_thaiName ?>' name="s_thaiName">
+            </div>
+            <div class="col-lg-2">
+                <font color="orange"><b>THAI</b></font>
             </div>
        </div>
         
@@ -104,9 +116,7 @@
        </div>
        
         <div class="pull-right">
-            <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-sm" name="save">SIMPAN</button>
-            </div>
+            <button type="submit" class="btn btn-primary btn-sm" name="save">SIMPAN</button>
         </div>  
         <br>
 

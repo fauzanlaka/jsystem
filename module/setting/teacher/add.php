@@ -146,12 +146,10 @@
                         <span class="password_strength" id="password_strength2"></span>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="col-lg-10 col-lg-offset-10">
-                        <button type="reset" class="btn btn-default btn-sm">BATAL</button>
-                        <button type="submit" class="btn btn-primary btn-sm" name="save">SIMPAN</button>
-                    </div>
-                </div>
+                <div class="pull-right">
+                    <button type="reset" class="btn btn-default btn-sm">BATAL</button>
+                    <button type="submit" class="btn btn-primary btn-sm" name="save">SIMPAN</button>
+                </div><br><br>
     </form>
    
 </div>

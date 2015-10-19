@@ -43,7 +43,7 @@
            <div class="col-lg-10 col-lg-offset-1">
                
                 <div class="col-lg-3">
-                     <select name="year" id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Angkatan...">
+                     <select name="year" id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Tahun pengajian...">
                          <?php
                             while($rowYear = mysqli_fetch_array($year)){
                          ?>

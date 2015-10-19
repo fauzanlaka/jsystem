@@ -24,6 +24,9 @@
 ?>
 <br>
 <div class='well'>
+    <div class="pull-right">
+        <a href="?page=setting&&settingpage=teacher"><button type="submit" class="btn btn-primary btn-sm" name="save"><span class="glyphicon glyphicon-chevron-left"></span> KEMBALI</button></a>
+    </div>
     <h4><span class="glyphicon glyphicon-edit"></span> <b>UBAH DATA PENSYARAH</b></h4>
     <hr>
     <form class="form-horizontal" action="?page=setting&&settingpage=saveEditTeacher&&id=<?= $id ?>" enctype="multipart/form-data" method="POST">
