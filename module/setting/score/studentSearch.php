@@ -57,7 +57,7 @@
 <?php if($department == "0"){ ?>
 <p><strong><?= $rowFaculty['ft_name'] ?> , Kelas : <?= $cnow ?> , <?= $rowSubject['s_code'] ?> : <?= $rowSubject['s_rumiName'] ?></p>
 <?php }else{ ?>
-<p><strong><?= $rowFaculty['ft_name'] ?> , <?= $rowDepartment['dp_name'] ?> , Kelas : <?= $class ?></p>
+<p><strong><?= $rowFaculty['ft_name'] ?> , <?= $rowDepartment['dp_name'] ?> , Kelas : <?= $cnow ?></p>
 <?php } ?>
 
 <?php
