@@ -50,9 +50,16 @@
                                     ");    
     }
     
-    $sql = mysqli_query($con, "SELECT * FROM studentSubject WHERE ss_term='$term' and ss_year='$year' ");
+    $sql = mysqli_query($con, "SELECT s.*,ss.* FROM students s 
+                        INNER JOIN studentSubject ss ON s.st_id=ss.st_id 
+                        WHERE s.ft_id='$faculty' and s.dp_id='$department' and ss.ss_term='$term' and ss.ss_year='$year' ");
     $get = mysqli_fetch_array($sql);
-    $id = $get['st_id'];
+    
+    if($get[0] > 0){
+        $id = 1;
+    }else{
+        $id = 0;
+    }
 ?>
 <br>
 <div class='well'>

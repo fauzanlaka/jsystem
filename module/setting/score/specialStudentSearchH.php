@@ -1,5 +1,5 @@
 <?php
-    $year = $_POST['year']; //Year of studenSubject table
+    $year = $_POST['year'];
     $faculty = $_POST['faculty'];
     $department = $_POST['department'];
     $subject = $_POST['subject'];
@@ -38,18 +38,18 @@
     if($kelas == $fordth){ $cnow = '4'; }
 
     //Get student data for update score
-    //Get student data for update score
     if($department == "0"){
     $score = mysqli_query($con, "SELECT s.*,ss.* FROM students s
                          INNER JOIN studentSubject ss ON s.st_id=ss.st_id
-                         WHERE s.ft_id='$faculty' and ss.ss_year='$cyear' and ss.s_id='$subject' ORDER BY s.student_id");
+                         WHERE s.ft_id='$faculty' and ss.ss_year='$year' and ss.s_id='$subject' ORDER BY s.student_id");
     }else{
     $score = mysqli_query($con, "SELECT s.*,ss.* FROM students s
                          INNER JOIN studentSubject ss ON s.st_id=ss.st_id
-                         WHERE s.ft_id='$faculty' and s.dp_id='$department' and ss.ss_year='$cyear' and ss.s_id='$subject' ORDER BY s.student_id");    
+                         WHERE s.ft_id='$faculty' and s.dp_id='$department' and ss.ss_year='$year' and ss.s_id='$subject' ORDER BY s.student_id");    
     }
 
  ?>
+<div class="well">
 <div class='pull-left'>
     <a href="?page=setting&&settingpage=specialScore" class="btn btn-primary btn-sm"><span class='glyphicon glyphicon-chevron-left'></span> BACK</a>
 </div>
@@ -108,4 +108,6 @@
         </div>
         <?php
             echo "</form>"; 
-        ?>
+        ?>    
+</div>
+

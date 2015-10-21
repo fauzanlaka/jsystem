@@ -3,10 +3,8 @@
         $id = $_GET['id'];
         $t = $_GET['t'];
         $y = $_GET['y'];
-        $check = mysqli_query($con, "SELECT * FROM studentSubject WHERE st_id='$id' and ss_term='$t' and ss_year='$y'");
-        $rowCheck = mysqli_fetch_array($check);
         
-        if($rowCheck[0] > 0 ){
+        if($id == 1 ){
  ?> 
         <br>
         <div class="alert alert-dismissible alert-danger">

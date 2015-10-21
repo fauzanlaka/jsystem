@@ -7,15 +7,15 @@
         <h4><span class="glyphicon glyphicon-book"></span> <b>TAMBAH MATA KULIAH</b></h4>
     </div>
     <div class="pull-right">
-        <a href="?page=setting&&settingpage=subject"><button type="submit" class="btn btn-primary btn-sm" name="save"><span class="glyphicon glyphicon-chevron-left"></span> KEMBALI</button></a>
+        <a href="?page=setting&&settingpage=subject"><button type="submit" class="btn btn-success btn-sm" name="save"><span class="glyphicon glyphicon-chevron-left"></span> KEMBALI</button></a>
     </div>
     <br><br>
     <hr>
     <form class="form-horizontal" action="?page=setting&&settingpage=saveSubject" enctype="multipart/form-data" method="POST">
      
         <div class='pull-right'>
-            <button type="reset" class="btn btn-default btn-sm">BATAL</button>
-            <button type="submit" class="btn btn-primary btn-sm" name="save">SIMPAN</button>
+            <button type="reset" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-remove"></span>  BATAL</button>
+            <button type="submit" class="btn btn-success btn-sm" name="save"><span class="glyphicon glyphicon-floppy-disk"></span> SIMPAN</button>
         </div>
         
         <div class="form-group">
@@ -90,8 +90,8 @@
        </div>
        
         <div class="pull-right">  
-            <button type="reset" class="btn btn-default btn-sm">BATAL</button>
-            <button type="submit" class="btn btn-primary btn-sm" name="save">SIMPAN</button>
+            <button type="reset" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-remove"></span> BATAL</button>
+            <button type="submit" class="btn btn-success btn-sm" name="save"><span class="glyphicon glyphicon-floppy-disk"></span> SIMPAN</button>
         </div>
         <br><br>
     </form>
