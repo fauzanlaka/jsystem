@@ -50,8 +50,8 @@
 
  ?>
 <div class="well">
-<div class='pull-left'>
-    <a href="?page=setting&&settingpage=specialScore" class="btn btn-primary btn-sm"><span class='glyphicon glyphicon-chevron-left'></span> BACK</a>
+<div class='pull-right'>
+    <a href="?page=setting&&settingpage=specialScore" class="btn btn-success btn-sm"><span class='glyphicon glyphicon-chevron-left'></span> KEMBALI</a>
 </div>
 <br>
 <br>
@@ -102,8 +102,7 @@
        <input type="hidden" name="subject" value="<?= $subject ?>">
         <div class="form-group">
             <div class="col-lg-10 col-lg-offset-6">
-                <button type="reset" class="btn btn-default btn-sm" name="save">MEMBATAL</button>
-                <button type="submit" class="btn btn-primary btn-sm" name="save">SIMPAN</button>
+                <button type="submit" class="btn btn-success btn-sm" name="save"><span class="glyphicon glyphicon-floppy-disk"></span> SIMPAN</button>
             </div>
         </div>
         <?php

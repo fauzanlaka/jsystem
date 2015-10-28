@@ -8,14 +8,14 @@
 ?>
 <br>
 <div class="pull-left">
-    <a href="?page=setting&&settingpage=stAdd" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-plus-sign"></span> TAMBAH</a>
-    <a href="?page=setting&&settingpage=st" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-list-alt"></span> DAFTAR</a>
+    <a href="?page=setting&&settingpage=stAdd" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-plus-sign"></span> TAMBAH</a>
+    <a href="?page=setting&&settingpage=st" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-list-alt"></span> DAFTAR</a>
 </div>
 <br><br>
 <div class='well'>
     <h4><span class="glyphicon glyphicon-cog"></span> <b>PENGURUSAN SABJEK</b></h4>
     <hr>
-    <form class="form-horizontal" action="?page=setting&&settingpage=saveSt" enctype="multipart/form-data" method="POST">
+    <form class="form-horizontal" action="?page=setting&&settingpage=stEditSave" enctype="multipart/form-data" method="POST">
         
        <div class="form-group">
             <label class="col-lg-5 control-label">MATA KULIAH :</label>
@@ -49,10 +49,11 @@
            </div>
        </div>
         
+       <input type="hidden" name="id" value="<?= $id ?>">
+        
        <div class="form-group">
             <div class="col-lg-10 col-lg-offset-5">
-                <button type="reset" class="btn btn-default btn-sm">BATAL</button>
-                <button type="submit" class="btn btn-primary btn-sm" name="save">SIMPAN</button>
+                <button type="submit" class="btn btn-success btn-sm" name="save"><span class="glyphicon glyphicon-floppy-disk"></span> SIMPAN</button>
             </div>
        </div>
         

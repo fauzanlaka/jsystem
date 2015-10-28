@@ -125,12 +125,8 @@
     //-----------------------------------------------------------------------------------------------
 ?>
 <br>
-<a href="?page=setting&&settingpage=l" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-chevron-left"></span> BACK</a>
-<br><br>
-<div class="panel panel-primary">
-  <div class="panel-heading">
-    <h3 class="panel-title">
-        <b>
+<div class="pull-left">
+    <b>
             <?= $rowF['ft_name']; ?>
         </b>  
             <?php
@@ -139,8 +135,12 @@
                 echo $rowD['dp_name'];
                 }
             ?>
-    </h3>
-  </div>
+</div>
+<div class="pull-right">
+    <a href="?page=setting&&settingpage=l" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-chevron-left"></span> KEMBALI</a>
+</div>
+<br><br>
+<div class="panel panel-primary">
   <div class="panel-body">
       <table class="table table-bordered">
           <tr>
@@ -175,7 +175,7 @@
                         }
                       ?>
                   </table>
-                  <a href="?page=setting&&settingpage=sAdd&&ft_id=<?= $ft_id ?>&&dp_id=<?= $dp_id ?>&&class=1&&term=1" class="btn btn-primary btn-xs">Tambah</a>
+                  <a href="?page=setting&&settingpage=sAdd&&ft_id=<?= $ft_id ?>&&dp_id=<?= $dp_id ?>&&class=1&&term=1" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-plus-sign"></span> Tambah</a>
               </td>
               <td align="center">
                   <table>
@@ -200,7 +200,7 @@
                         }
                       ?>
                   </table>
-                  <a href="?page=setting&&settingpage=sAdd&&ft_id=<?= $ft_id ?>&&dp_id=<?= $dp_id ?>&&class=1&&term=2" class="btn btn-primary btn-xs">Tambah</a>
+                  <a href="?page=setting&&settingpage=sAdd&&ft_id=<?= $ft_id ?>&&dp_id=<?= $dp_id ?>&&class=1&&term=2" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-plus-sign"></span> Tambah</a>
               </td>
           </tr>
           <tr>
@@ -230,7 +230,7 @@
                         }
                       ?>
                   </table>
-                  <a href="?page=setting&&settingpage=sAdd&&ft_id=<?= $ft_id ?>&&dp_id=<?= $dp_id ?>&&class=2&&term=1" class="btn btn-primary btn-xs">Tambah</a>
+                  <a href="?page=setting&&settingpage=sAdd&&ft_id=<?= $ft_id ?>&&dp_id=<?= $dp_id ?>&&class=2&&term=1" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-plus-sign"></span> Tambah</a>
               </td>
               <td align="center">
                   <table>
@@ -255,7 +255,7 @@
                         }
                       ?>
                   </table>
-                  <a href="?page=setting&&settingpage=sAdd&&ft_id=<?= $ft_id ?>&&dp_id=<?= $dp_id ?>&&class=2&&term=2" class="btn btn-primary btn-xs">Tambah</a>
+                  <a href="?page=setting&&settingpage=sAdd&&ft_id=<?= $ft_id ?>&&dp_id=<?= $dp_id ?>&&class=2&&term=2" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-plus-sign"></span> Tambah</a>
               </td>
           </tr>
           <tr>
@@ -285,7 +285,7 @@
                         }
                       ?>
                   </table>
-                  <a href="?page=setting&&settingpage=sAdd&&ft_id=<?= $ft_id ?>&&dp_id=<?= $dp_id ?>&&class=3&&term=1" class="btn btn-primary btn-xs">Tambah</a>
+                  <a href="?page=setting&&settingpage=sAdd&&ft_id=<?= $ft_id ?>&&dp_id=<?= $dp_id ?>&&class=3&&term=1" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-plus-sign"></span> Tambah</a>
               </td>
               <td align="center">
                   <table>
@@ -310,7 +310,7 @@
                         }
                       ?>
                   </table>
-                  <a href="?page=setting&&settingpage=sAdd&&ft_id=<?= $ft_id ?>&&dp_id=<?= $dp_id ?>&&class=3&&term=2" class="btn btn-primary btn-xs">Tambah</a>
+                  <a href="?page=setting&&settingpage=sAdd&&ft_id=<?= $ft_id ?>&&dp_id=<?= $dp_id ?>&&class=3&&term=2" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-plus-sign"></span> Tambah</a>
               </td>
           </tr>
           <tr>
@@ -340,7 +340,7 @@
                         }
                       ?>
                   </table>
-                  <a href="?page=setting&&settingpage=sAdd&&ft_id=<?= $ft_id ?>&&dp_id=<?= $dp_id ?>&&class=4&&term=1" class="btn btn-primary btn-xs">Tambah</a>
+                  <a href="?page=setting&&settingpage=sAdd&&ft_id=<?= $ft_id ?>&&dp_id=<?= $dp_id ?>&&class=4&&term=1" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-plus-sign"></span> Tambah</a>
               </td>
               <td align="center">
                   <table>
@@ -365,7 +365,7 @@
                         }
                       ?>
                   </table>
-                  <a href="?page=setting&&settingpage=sAdd&&ft_id=<?= $ft_id ?>&&dp_id=<?= $dp_id ?>&&class=4&&term=2" class="btn btn-primary btn-xs">Tambah</a>
+                  <a href="?page=setting&&settingpage=sAdd&&ft_id=<?= $ft_id ?>&&dp_id=<?= $dp_id ?>&&class=4&&term=2" class="btn btn-success btn-xs"><span class="glyphicon glyphicon-plus-sign"></span> Tambah</a>
               </td>
           </tr>
       </table>

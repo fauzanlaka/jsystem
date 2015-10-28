@@ -1,7 +1,7 @@
 <br>
 <div class="pull-left">
-    <a href="?page=setting&&settingpage=stAdd" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-plus-sign"></span> TAMBAH</a>
-    <a href="?page=setting&&settingpage=st" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-list-alt"></span> DAFTAR</a>
+    <a href="?page=setting&&settingpage=stAdd" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-plus-sign"></span> TAMBAH</a>
+    <a href="?page=setting&&settingpage=st" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-list-alt"></span> DAFTAR</a>
 </div>
 
 <div class="pull-right">

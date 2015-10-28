@@ -94,6 +94,9 @@
         case 'stDelete':
             include 'module/setting/setting/subject/stDelete.php';
             break;
+        case 'stEditSave':
+            include 'module/setting/setting/subject/stEditSave.php';
+            break;
         case 'l':
             include 'module/setting/setting/learning/list.php';
             break;

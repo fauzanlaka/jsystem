@@ -96,7 +96,7 @@
       
       <div class="form-group">
             <div class="col-lg-10 col-lg-offset-6">
-                <button type="submit" class="btn btn-primary btn-sm" name="save">MENCARI</button>
+                <button type="submit" class="btn btn-success btn-sm" name="save"><span class="glyphicon glyphicon-search"></span> MENCARI</button>
             </div>
       </div>
       
