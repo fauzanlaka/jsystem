@@ -134,7 +134,7 @@ $paymentpage = $_GET['paymentpage']; // To get the page
             $rs_summoney = mysqli_fetch_assoc($totalmoney_t1);
         ?>
     
-        <div class="panel panel-success">
+        <div class="panel panel-primary">
             <div class="panel-heading">
               <h3 class="panel-title">Mahasiswa yang daftar belajar : 1/<?= $year_register ?></h3>
             </div>
@@ -273,7 +273,7 @@ $paymentpage = $_GET['paymentpage']; // To get the page
 
         ?>
         
-        <div class="panel panel-info">
+        <div class="panel panel-primary">
             <div class="panel-heading">
               <h3 class="panel-title">Mahasiswa yang daftar ujian : 1/<?= $year_register ?></h3>
             </div>
@@ -429,7 +429,7 @@ $paymentpage = $_GET['paymentpage']; // To get the page
         
         ?>
     
-        <div class="panel panel-success">
+        <div class="panel panel-primary">
             <div class="panel-heading">
               <h3 class="panel-title">Mahasiswa yang daftar belajar : 2/<?= $year_register ?></h3>
             </div>
@@ -478,7 +478,7 @@ $paymentpage = $_GET['paymentpage']; // To get the page
             </div>
         </div>
         
-        <div class="panel panel-info">
+        <div class="panel panel-primary">
             <div class="panel-heading">
               <h3 class="panel-title">Mahasiswa yang daftar ujian : 2/<?= $year_register ?></h3>
             </div>

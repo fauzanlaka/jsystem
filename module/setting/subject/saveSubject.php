@@ -6,6 +6,8 @@
     $s_engName = mysqli_real_escape_string($con, $_POST['s_engName']);
     $s_thaiName = mysqli_real_escape_string($con, $_POST['s_thaiName']);
     $s_type = mysqli_real_escape_string($con, $_POST['s_type']);
+    $s_faculty = mysqli_real_escape_string($con, $_POST['s_faculty']);
+    $s_department = mysqli_real_escape_string($con, $_POST['s_department']);
     $s_detail = mysqli_real_escape_string($con, $_POST['s_detail']);
     
     //Existing data checking 
@@ -22,8 +24,8 @@
 <?php
     }else{
         $insert = mysqli_query($con, "INSERT INTO subject
-                (ft_id,s_code,s_arabName,s_rumiName,s_engName,s_thaiName,s_type,s_detail) VALUES
-                ('$ft_id','$s_code','$s_arabName','$s_rumiName','$s_engName','$s_thaiName','$s_type','$s_detail')
+                (ft_id,s_code,s_arabName,s_rumiName,s_engName,s_thaiName,s_type,s_faculty,s_department,s_detail) VALUES
+                ('$ft_id','$s_code','$s_arabName','$s_rumiName','$s_engName','$s_thaiName','$s_type','$s_faculty','$s_department','$s_detail')
                 ");
         
         $subject = mysqli_query($con, "SELECT * FROM subject WHERE s_id = (SELECT MAX(s_id) FROM subject)");

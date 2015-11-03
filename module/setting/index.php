@@ -131,5 +131,8 @@
         case 'specialScoreSave':
             include 'module/setting/score/specialScoreSave.php';
             break;
+        case 'specialPrint':
+            include 'module/setting/score/specialPrint.php';
+            break;
     }
 ?>

@@ -51,6 +51,9 @@
  ?>
 <br>
 <div class="well">
+<div class="pull-left">
+    <a href="module/setting/score/specialPrint.php?year=<?= $year ?>&&faculty=<?= $faculty ?>&&department=<?= $department ?>&&subject=<?= $subject ?>" target="_blank"><button type="button" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-print"></span> PRINT</button></a>
+</div>
 <div class='pull-right'>
     <a href="?page=setting&&settingpage=specialScore" class="btn btn-success btn-sm"><span class='glyphicon glyphicon-chevron-left'></span> KEMBALI</a>
 </div>

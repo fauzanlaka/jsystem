@@ -7,6 +7,8 @@
     $s_engName = mysqli_real_escape_string($con, $_POST['s_engName']);
     $s_thaiName = mysqli_real_escape_string($con, $_POST['s_thaiName']);
     $s_type = mysqli_real_escape_string($con, $_POST['s_type']);
+    $s_faculty = mysqli_real_escape_string($con, $_POST['s_faculty']);
+    $s_department = mysqli_real_escape_string($con, $_POST['s_department']);
     $s_detail = mysqli_real_escape_string($con, $_POST['s_detail']);
     
     $update = mysqli_query($con, "UPDATE subject SET
@@ -17,6 +19,8 @@
                           s_engName = '$s_engName',
                           s_thaiName = '$s_thaiName',
                           s_type = '$s_type',
+                          s_faculty = '$s_faculty',
+                          s_department = '$s_department',
                           s_detail = '$s_detail'
                           WHERE s_id = '$id'
                           ");

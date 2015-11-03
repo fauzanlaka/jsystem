@@ -11,6 +11,8 @@
     $s_engName = str_replace("\'", "&#39;", $rs['s_engName']);
     $s_thaiName = str_replace("\'", "&#39;", $rs['s_thaiName']);
     $s_type = str_replace("\'", "&#39;", $rs['s_type']);
+    $s_faculty = str_replace("\'", "&#39;", $rs['s_faculty']);
+    $s_department = str_replace("\'", "&#39;", $rs['s_department']);
     $s_detail = str_replace("\'", "&#39;", $rs['s_detail']);
 ?>
 <br>
@@ -93,24 +95,40 @@
             <div class="col-lg-3">
                 <select name="s_type" id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Pilih...">
                     <option value="Jamiah" <?=$s_type == 'Jamiah' ? ' selected="selected"' : ''?>>Jamiah</option>
-                    <option value="Kuliah" <?=$s_type == 'Kuliah' ? ' selected="selected"' : ''?>>Kuliah</option>
+                    <option value="Fakulti" <?=$s_type == 'Fakulti' ? ' selected="selected"' : ''?>>Fakulti</option>
+                    <option value="Jurusan" <?=$s_type == 'Jurusan' ? ' selected="selected"' : ''?>>Jurusan</option>
                 </select>
            </div>
        </div>
         
-       <div class="form-group">
-            <label class="col-lg-2 control-label">KULIAH :</label>
+        <div class="form-group">
+            <label class="col-lg-2 control-label">Fakulti :</label>
             <div class="col-lg-3">
-                <select name="ft_id" id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Pilih...">
-                    <option></option>
+                <select name="s_faculty" id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Pilih...">
                     <?php
-                    $faculty = mysqli_query($con, "SELECT * FROM fakultys");
-                    while($row = mysqli_fetch_array($faculty)){
-                ?>
-                    <option value="<?= $row['ft_id'] ?>" <?=$ft_id == $row["ft_id"] ? ' selected="selected"' : ''?>><?= $row['ft_name'] ?></option>
-                <?php
-                    }
-                ?>
+                        $faculty = mysqli_query($con, "SELECT * FROM fakultys");
+                        while($rowFaculty = mysqli_fetch_array($faculty)){
+                    ?>
+                        <option value="<?= $rowFaculty['ft_id'] ?>" <?php if($rowFaculty['ft_id']==$s_faculty){echo 'selected="selected" ';} ?> ><?= $rowFaculty['ft_name'] ?></option>    
+                    <?php
+                        }
+                    ?>
+                </select>
+           </div>
+       </div>
+        
+        <div class="form-group">
+            <label class="col-lg-2 control-label">Jurusan :</label>
+            <div class="col-lg-3">
+                <select name="s_department" id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Pilih...">
+                    <?php
+                        $department = mysqli_query($con, "SELECT * FROM departments");
+                        while($rowDepartment = mysqli_fetch_array($department)){
+                    ?>
+                        <option value="<?= $rowDepartment['dp_id'] ?>" <?php if($rowDepartment['dp_id']==$s_department){echo 'selected="selected" ';} ?>><?= $rowDepartment['dp_name'] ?></option>    
+                    <?php
+                        }
+                    ?>
                 </select>
            </div>
        </div>
