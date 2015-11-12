@@ -48,8 +48,11 @@
                          WHERE s.class='$class' and s.ft_id='$faculty' and s.dp_id='$department' and ss.ss_year='$cyear' and ss.s_id='$subject' ORDER BY s.student_id");    
     }
  ?>
-<div class='pull-left'>
-    <a href="?page=setting&&settingpage=score" class="btn btn-primary btn-sm"><span class='glyphicon glyphicon-chevron-left'></span> BACK</a>
+<div class="pull-left">
+    <a href="module/setting/score/specialPrint.php?year=<?= $cyear ?>&&faculty=<?= $faculty ?>&&department=<?= $department ?>&&subject=<?= $subject ?>" target="_blank" class="btn btn-success btn-sm"><span class='glyphicon glyphicon-print'></span> PRINT</a>
+</div>
+<div class='pull-right'>
+    <a href="?page=setting&&settingpage=score" class="btn btn-success btn-sm"><span class='glyphicon glyphicon-chevron-left'></span> BACK</a>
 </div>
 <br>
 <br>

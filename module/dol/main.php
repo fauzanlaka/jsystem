@@ -1,29 +1,14 @@
-<br>
-<div class="pull-left">
-    <a href="?page=setting&&settingpage=subjectAdd" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-plus-sign"></span> TAMBAH</a>
-</div>
 
-<div class="pull-right">
-        <form class="navbar-form" role="search" action="?page=setting&&settingpage=searchSubject" method="post">
-            <div class="input-group">
-                <input type="text" class="form-control" name="q" required>
-            <div class="input-group-btn">
-                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-            </div>
-            </div>
-        </form>
-</div>
-
-
+<!-- Stadent table's data -->
 <?php
-    $pagic = "?page=setting&&settingpage=subject";
-    $sql = "SELECT COUNT(s_id) FROM subject";
+    $pagic = "?page=dol&&dolpage=main";
+    $sql = "SELECT COUNT(st_id) FROM students";
     $query = mysqli_query($con, $sql);
     $row = mysqli_fetch_row($query);
     // Here we have the total row count
     $rows = $row[0];
     // This is the number of results we want displayed per page
-    $page_rows = 9;
+    $page_rows = 10;
     // This tells us the page number of our last page
     $last = ceil($rows/$page_rows);
     // This makes sure $last cannot be less than 1
@@ -45,7 +30,7 @@
     // This sets the range of rows to query for the chosen $pagenum
     $limit = 'LIMIT ' .($pagenum - 1) * $page_rows .',' .$page_rows;
     // This is your query again, it is for grabbing just one page worth of rows by applying $limit
-    $sql = "SELECT * FROM subject ORDER BY s_id DESC $limit";
+    $sql = "SELECT st.*,ft.* FROM students st INNER JOIN fakultys ft on st.ft_id=ft.ft_id ORDER BY st_id DESC $limit";
     $query = mysqli_query($con, $sql);
     // This shows the user what page they are on, and the total number of pages
     $textline1 = "จำนวน(<b>$rows</b>)";
@@ -85,45 +70,39 @@
     }
     $list = '';
 ?>
-
-<br><br>
 <font color="grey"><?= $textline2 ?></font>
 <table class="table table-striped table-hover table-bordered">
     <thead>
       <tr>
-        <td align="center"><b>KODE</b></td>
-        <td align="center"><b>NAMA MATA KULIAH</b></td>
-        <td align="center"><b>NAMA MATA KULIAH</b></td>
-        <td align="center"><b>JENIS</b></td>
-        <td align="center"><b>UBAH</b></td>
+        <td align="center"><b>NO.POKOK</b></td>
+        <td align="center"><b>NAMA-NASAB</b></td>
+        <td align="center"><b>نام - نسب</b></td>
+        <td align="center"><b>FAKULTI</b></td>
+        <td align="center"><b>TELEPON</b></td>
       </tr>
     </thead>
     <tbody>
 <?php
     while($row = mysqli_fetch_array($query)){
-        $id = $row['s_id'];
-        $s_code = $row['s_code'];
-        $s_rumiName = str_replace("\'", "&#39;", $row["s_rumiName"]);
-        $s_arabName = str_replace("\'", "&#39;", $row["s_arabName"]);
-        $s_type = str_replace("\'", "&#39;", $row["s_type"]);
+        $id = $row['st_id'];
+        $student_id = $row['student_id'];
+        $fname = str_replace("\'", "&#39;", $row["firstname_rumi"]);
+        $lname = str_replace("\'", "&#39;", $row["lastname_rumi"]);
+        $fname_j = str_replace("\'", "&#39;", $row["firstname_jawi"]);
+        $lname_j = str_replace("\'", "&#39;", $row["lastname_jawi"]);
+        $faculty = str_replace("\'", "&#39;", $row["ft_name"]);
+        $telephone = str_replace("\'", "&#39;", $row["telephone"]);
 ?>
         <tr>
-          <td align="center"><?= $s_code ?></td>
-          <td align='left'><?= $s_rumiName ?></td>
-          <td align="right"><?= $s_arabName ?></td>
-          <td align='center'><?= $s_type ?></td>
-          <td align="center"><a href="?page=setting&&settingpage=subjectEdit&&id=<?= $id ?>" ><span class="glyphicon glyphicon-edit"></span></a></td>
+          <td align="center"><a href="?page=dol&&dolpage=query&&id=<?= $id ?>"><?= $student_id ?></a></td>
+          <td><?= strtoupper($fname) ?> - <?= strtoupper($lname) ?></td>
+          <td align="right"><?= strtoupper($fname_j) ?> - <?= strtoupper($lname_j) ?></td>
+          <td><?= $faculty ?></td>
+          <td align="center"><?= $telephone ?></td>
         </tr>
 <?php
     }
 ?>
     </tbody>
 </table> 
-<?php
-    //Get total of subject
-    $sqlTotal = mysqli_query($con, "SELECT * FROM subject");
-    $rowSubjectNum = mysqli_num_rows($sqlTotal);
-    echo "<font color='grey'><b>Total mata kuliah :</b> &nbsp;".$rowSubjectNum. "</font>";
-    echo "<br>";
-?>
 <div class="pagination"><?php echo $paginationCtrls; ?></div>

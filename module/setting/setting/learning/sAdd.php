@@ -44,8 +44,9 @@
                              $s_code = $row['s_code'];
                              $t_fnameRumi = $row['t_fnameRumi'];
                              $t_lnameRumi = $row['t_lnameRumi'];
+                             $s_name = $row['s_arabName']."&nbsp;".$row['s_rumiName'];
                      ?>
-                         <option value="<?= $tc_id ?>"><?= $s_code ?> , <?= $t_fnameRumi ?> - <?= $t_lnameRumi ?></option>
+                         <option value="<?= $tc_id ?>"><?= $s_name ?> , <?= $s_code ?> , <?= $t_fnameRumi ?> - <?= $t_lnameRumi ?></option>
                      <?php
                          }
                      ?>

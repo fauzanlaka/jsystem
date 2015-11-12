@@ -88,6 +88,9 @@
                             case 'rs':
                                 include 'module/special/index.php';
                                 break;
+                            case 'dol':
+                                include 'module/dol/index.php';
+                                break;
                         }
             ?>
          

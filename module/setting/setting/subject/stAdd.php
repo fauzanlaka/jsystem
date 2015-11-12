@@ -16,11 +16,12 @@
                 <?php
                     $subject = mysqli_query($con, "SELECT * FROM subject GROUP BY s_code ORDER BY s_code");
                     while($row = mysqli_fetch_array($subject)){
+                        $s_name = $row['s_arabName']."&nbsp;|&nbsp;".$row['s_rumiName'];
                 ?>
-                    <option value="<?= $row['s_id'] ?>"><?= $row['s_code'] ?> , <?= $row['s_rumiName'] ?></option>
+                    <option value="<?= $row['s_id'] ?>"><?= $s_name ?> &nbsp;|&nbsp; <?= $row['s_code'] ?></option>
                 <?php
                     }
-                ?>
+                    ?>
                 </select>
            </div>
        </div>

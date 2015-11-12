@@ -63,7 +63,7 @@
     <li role="presentation"><a href="?page=setting&&settingpage=specialScore"><span class='glyphicon glyphicon-cog'></span> Perkuliahan / فركليهن</a></li>
     <li role="presentation"><a href="?page=post&&postpage=main"><span class='glyphicon glyphicon-tasks'></span> Post maklumat</a></li>
     <li role="presentation"><a href="?page=rs&&rspage=main"><span class='glyphicon glyphicon-flag'></span> Special menu</a></li>
-    <li role="presentation"><a href="#"><span class='glyphicon glyphicon-compressed'></span> Struktur</a></li>
+    <li role="presentation"><a href="?page=dol&&dolpage=main""><span class='glyphicon glyphicon-compressed'></span> Sistem dol / سيستيم دول</a></li>
     <li role="presentation"><a href="#"><span class='glyphicon glyphicon-stats'></span> Statistik mahasiswa</a></li>
 </ul>
 <?php 
