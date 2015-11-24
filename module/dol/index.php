@@ -1,9 +1,9 @@
         <div class='pull-left'>
-            <span class="glyphicon glyphicon-option-vertical"></span> <b>SISTEM DUL</b>
+            <span class="glyphicon glyphicon-option-vertical"></span> <b>SISTEM DUR</b>
         </div>
         <div class='pull-right'>
             <a href="?page=dol&&dolpage=main" class='btn btn-success btn-sm'><span class='glyphicon glyphicon-list'></span> SEMUA</a>
-            <a href="?page=dol&&search=list&&dolpage=list" class='btn btn-success btn-sm'><span class='glyphicon glyphicon-list'></span> DAFTAR DUL</a>
+            <a href="?page=dol&&search=list&&dolpage=list" class='btn btn-success btn-sm'><span class='glyphicon glyphicon-list'></span> DAFTAR DUR</a>
         </div>
         <br>
         <hr>

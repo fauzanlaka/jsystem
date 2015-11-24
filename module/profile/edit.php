@@ -1,22 +1,34 @@
 <?php
+    $status = $_SESSION["status"];
     $id = $_SESSION["UserID"];
-    $sql = mysqli_query($con, "SELECT * FROM user WHERE u_id='$id'");
-    $rs = mysqli_fetch_array($sql);
-    
-    $fname = str_replace("\'", "&#39;", $rs['u_fname']);
-    $lname = str_replace("\'", "&#39;", $rs['u_lname']);
-    $telephone = str_replace("\'", "&#39;", $rs['u_telephone']);
-    $email = str_replace("\'", "&#39;", $rs['u_email']);
-    $gender = str_replace("\'", "&#39;", $rs['u_sex']);
-    $status = str_replace("\'", "&#39;", $rs['u_status']);
-    $username = str_replace("\'", "&#39;", $rs['u_user']);
-    $password = str_replace("\'", "&#39;", $rs['u_passwod']);
+    if($status == 'Pensyarah'){
+        $sql = mysqli_query($con, "SELECT * FROM teachers WHERE t_id='$id'");
+        $rs = mysqli_fetch_array($sql);
+        $fname = str_replace("\'", "&#39;", $rs['t_fnameRumi']);
+        $lname = str_replace("\'", "&#39;", $rs['t_lnameRumi']);
+        $telephone = str_replace("\'", "&#39;", $rs['t_telephone']);
+        $email = str_replace("\'", "&#39;", $rs['t_email']);
+        $gender = str_replace("\'", "&#39;", $rs['t_gender']);
+        $status = str_replace("\'", "&#39;", $rs['t_status']);
+        $username = str_replace("\'", "&#39;", $rs['t_username']);
+        $password = str_replace("\'", "&#39;", $rs['t_password']);
+    }else{
+        $sql = mysqli_query($con, "SELECT * FROM user WHERE u_id='$id'");
+        $rs = mysqli_fetch_array($sql);
+        $fname = str_replace("\'", "&#39;", $rs['u_fname']);
+        $lname = str_replace("\'", "&#39;", $rs['u_lname']);
+        $telephone = str_replace("\'", "&#39;", $rs['u_telephone']);
+        $email = str_replace("\'", "&#39;", $rs['u_email']);
+        $gender = str_replace("\'", "&#39;", $rs['u_sex']);
+        $status = str_replace("\'", "&#39;", $rs['u_status']);
+        $username = str_replace("\'", "&#39;", $rs['u_user']);
+        $password = str_replace("\'", "&#39;", $rs['u_passwod']);    
+    }
+    //echo $status;
 ?>
-<br>
-<div class="well">
+<h5><span class="glyphicon glyphicon-edit"></span> <b>UBAH DATA</b></h5>
+<hr>
     <form class="form-horizontal" action="?page=profile&&profilepage=saveedit" enctype="multipart/form-data" method="POST">
-        <fieldset>
-            <legend><span class="glyphicon glyphicon-edit"></span> UBAH DATA</legend>
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Nama-Nasab :</label>
                     <div class="col-lg-3">
@@ -76,12 +88,9 @@
                     </div>
                 </div>
                 <input type="hidden" name="id" value="<?= $id ?>">
-                <div class="form-group">
-                    <div class="col-lg-10 col-lg-offset-2">
-                        <button type="reset" class="btn btn-default">BATAL</button>
-                        <button type="submit" class="btn btn-primary" name="save">SIMPAN</button>
-                    </div>
-                </div>
-        </fieldset>
+                <input type="hidden" name="type" value="<?= $status ?>">
+                <p class="text-center">
+                        <button type="submit" class="btn btn-success btn-sm" name="save">SIMPAN</button>
+                </p>
+                <hr>
     </form>
-</div>

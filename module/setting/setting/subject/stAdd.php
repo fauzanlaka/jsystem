@@ -11,19 +11,19 @@
         
        <div class="form-group">
             <label class="col-lg-5 control-label">MATA KULIAH :</label>
-            <div class="col-lg-7">
+            <div class="col-lg-2">
                 <select name="s_id" id="lunchBegins" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Pilih...">
                 <?php
                     $subject = mysqli_query($con, "SELECT * FROM subject GROUP BY s_code ORDER BY s_code");
                     while($row = mysqli_fetch_array($subject)){
-                        $s_name = $row['s_arabName']."&nbsp;|&nbsp;".$row['s_rumiName'];
+                        $s_name = $row['s_arabName'].$row['s_rumiName']."&nbsp;|&nbsp;".$row['s_code'];
                 ?>
-                    <option value="<?= $row['s_id'] ?>"><?= $s_name ?> &nbsp;|&nbsp; <?= $row['s_code'] ?></option>
+                    <option value="<?= $row['s_id'] ?>"><?= $s_name ?></option>
                 <?php
                     }
                     ?>
                 </select>
-           </div>
+            </div>
        </div>
         
        <div class="form-group">
@@ -34,7 +34,7 @@
                     $teacher = mysqli_query($con, "SELECT * FROM teachers ORDER BY t_fnameRumi");
                     while($row = mysqli_fetch_array($teacher)){
                 ?>
-                    <option value="<?= $row['t_id'] ?>"><?= $row['t_fnameRumi'] ?> - <?= $row['t_lnameRumi'] ?> , <?= $row['t_lnameArab'] ?> - <?= $row['t_fnameArab'] ?></option>
+                    <option value="<?= $row['t_id'] ?>"><?= $row['t_fnameRumi'] ?> - <?= $row['t_lnameRumi'] ?></option>
                 <?php
                     }
                 ?>

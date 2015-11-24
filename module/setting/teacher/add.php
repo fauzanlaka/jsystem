@@ -28,10 +28,10 @@
                 <div class="form-group">
                     <label class="col-lg-3 control-label">نام - نسب :</label>
                     <div class="col-lg-3">
-                      <input type="text" class="form-control input-sm" placeholder="نام" required name="t_fnameArab">
+                      <input type="text" class="form-control input-sm" placeholder="نام" name="t_fnameArab">
                     </div>
                     <div class="col-lg-3">
-                      <input type="text" class="form-control input-sm" placeholder="نسب" required name="t_lnameArab">
+                      <input type="text" class="form-control input-sm" placeholder="نسب" name="t_lnameArab">
                     </div>
                 </div>
         
@@ -56,8 +56,24 @@
                     </div>
                 </div>
                 
+                <?php
+                    //Creat teacher code(t_code)
+                    $t_code = mysqli_query($con, "SELECT * FROM teachers WHERE t_id = (SELECT max(t_id) FROM teachers)");
+                    $maxVal = mysqli_fetch_array($t_code);
+                    $mem_old = $maxVal['t_code'];
+                    $tmp1=substr($mem_old,4);
+                ?>
+        
                 <div class="form-group">
-                    <label class="col-lg-3 control-label">housenumber :</label>
+                    <label class="col-lg-3 control-label">KOD :</label>
+                    <div class="col-lg-2">
+                      <input type="text" class="form-control input-sm" name="t_mcode">
+                    </div>
+                    <font color="orange"><b>Bilangan terakhir :</b></font> <?= $tmp1 ?>
+                </div>
+        
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">NO.Rumah :</label>
                     <div class="col-lg-2">
                       <input type="text" class="form-control input-sm" name="t_housenumber">
                     </div>

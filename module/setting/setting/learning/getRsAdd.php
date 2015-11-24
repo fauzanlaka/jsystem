@@ -162,7 +162,7 @@
                               &nbsp;&nbsp;&nbsp;&nbsp;<?= $row11['s_code'] ?>
                           </td>
                           <td>
-                              &nbsp;&nbsp;&nbsp;&nbsp;<?= substr($row11['s_rumiName'], 0,20) ?>... <br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;<?= substr($row11['s_rumiName'], 0,20) ?><?= substr($row11['s_arabName'], 0,20) ?>... <br>
                               <font color="red"><b>(<?= $row11['t_fnameRumi'] ?> <?= $row11['t_lnameRumi'] ?>)</b></font>
                           </td>
                           <td>
@@ -187,7 +187,7 @@
                               &nbsp;&nbsp;&nbsp;&nbsp;<?= $row12['s_code'] ?>
                           </td>
                           <td>
-                              &nbsp;&nbsp;&nbsp;&nbsp;<?= substr($row12['s_rumiName'], 0,20) ?>...<br> 
+                              &nbsp;&nbsp;&nbsp;&nbsp;<?= substr($row12['s_rumiName'], 0,20) ?><?= substr($row12['s_arabName'], 0,20) ?>...<br> 
                               <font color="red"><b>(<?= $row12['t_fnameRumi'] ?> <?= $row12['t_lnameRumi'] ?>)</b></font>
                           </td>
                           <td>
@@ -217,7 +217,7 @@
                               &nbsp;&nbsp;&nbsp;&nbsp;<?= $row21['s_code'] ?>
                           </td>
                           <td>
-                              &nbsp;&nbsp;&nbsp;&nbsp;<?= substr($row21['s_rumiName'], 0,20) ?>...<br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;<?= substr($row21['s_rumiName'], 0,20) ?><?= substr($row21['s_arabName'], 0,20) ?>...<br>
                               <font color="red"><b>(<?= $row21['t_fnameRumi'] ?> <?= $row21['t_lnameRumi'] ?>)</b></font>
                           </td>
                           <td>
@@ -242,7 +242,7 @@
                               &nbsp;&nbsp;&nbsp;&nbsp;<?= $row22['s_code'] ?>
                           </td>
                           <td>
-                              &nbsp;&nbsp;&nbsp;&nbsp;<?= substr($row22['s_rumiName'], 0,20) ?>...<br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;<?= substr($row22['s_rumiName'], 0,20) ?><?= substr($row22['s_arabName'], 0,20) ?>...<br>
                               <font color="red"><b>(<?= $row22['t_fnameRumi'] ?> <?= $row22['t_lnameRumi'] ?>)</b></font>
                           </td>
                           <td>
@@ -272,7 +272,7 @@
                               &nbsp;&nbsp;&nbsp;&nbsp;<?= $row31['s_code'] ?>
                           </td>
                           <td>
-                              &nbsp;&nbsp;&nbsp;&nbsp;<?= substr($row31['s_rumiName'], 0,20) ?>...<br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;<?= substr($row31['s_rumiName'], 0,20) ?><?= substr($row31['s_arabName'], 0,20) ?>...<br>
                               <font color="red"><b>(<?= $row31['t_fnameRumi'] ?> <?= $row31['t_lnameRumi'] ?>)</b></font>
                           </td>
                           <td>
@@ -297,7 +297,7 @@
                               &nbsp;&nbsp;&nbsp;&nbsp;<?= $row32['s_code'] ?>
                           </td>
                           <td>
-                              &nbsp;&nbsp;&nbsp;&nbsp;<?= substr($row32['s_rumiName'], 0,20) ?>...<br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;<?= substr($row32['s_rumiName'], 0,20) ?><?= substr($row32['s_arabName'], 0,20) ?>...<br>
                               <font color="red"><b>(<?= $row32['t_fnameRumi'] ?> <?= $row32['t_lnameRumi'] ?>)</b></font>
                           </td>
                           <td>
@@ -327,7 +327,7 @@
                               &nbsp;&nbsp;&nbsp;&nbsp;<?= $row41['s_code'] ?>
                           </td>
                           <td>
-                              &nbsp;&nbsp;&nbsp;&nbsp;<?= substr($row41['s_rumiName'], 0,20) ?>...<br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;<?= substr($row41['s_rumiName'], 0,20) ?><?= substr($row41['s_arabName'], 0,20) ?>...<br>
                               <font color="red"><b>(<?= $row41['t_fnameRumi'] ?> <?= $row41['t_lnameRumi'] ?>)</b></font>
                           </td>
                           <td>
@@ -352,7 +352,7 @@
                               &nbsp;&nbsp;&nbsp;&nbsp;<?= $row42['s_code'] ?>
                           </td>
                           <td>
-                              &nbsp;&nbsp;&nbsp;&nbsp;<?= substr($row42['s_rumiName'], 0,20) ?>...<br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;<?= substr($row42['s_rumiName'], 0,20) ?><?= substr($row42['s_arabName'], 0,20) ?>...<br>
                               <font color="red"><b>(<?= $row42['t_fnameRumi'] ?> <?= $row42['t_lnameRumi'] ?>)</b></font>
                           </td>
                           <td>

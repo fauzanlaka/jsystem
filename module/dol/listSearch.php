@@ -87,7 +87,7 @@
                                                         //echo $code; echo "&nbsp;";  echo $subjectName; echo "&nbsp;"; echo $term; echo "&nbsp"; echo $year; echo "<br>";
                                                 ?>
                                                         <div class='form-group'>
-                                                            <div class='col-lg-5'>
+                                                            <div class='col-lg-6'>
                                                                 <b><?= $code ?></b> <i><?= $subjectName ?> <?= $term ?>/<?= $year ?></i> :     
                                                             </div>
                                                             <input type='hidden' name='id<?php echo "[".$i."]" ?>' value='<?= $ss_id ?>' />

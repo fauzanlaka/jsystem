@@ -28,7 +28,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     
-    <title>JISDA | Kertas dul</title>
+    <title>JISDA | Kertas dur</title>
     
     <style>
         body {
@@ -67,6 +67,11 @@
                     <tr align="center">
                         <td align="center" colspan="4">
                             <font size="4px"><b> جامعة الشيخ داود الفطاني اﻹسلامية - جالا </b></font><br><br>
+                        </td>
+                    </tr>
+                    <tr align="center">
+                        <td align="center" colspan="4">
+                            <font size="4px" color="black"><b>(كرتس دور)</b></font><br><br>
                         </td>
                     </tr>
                     <tr>
@@ -130,6 +135,7 @@
                 <table border="1px" width="100%">
                       <tr bgcolor="grey">
                         <td align="center"><b>جمله دويت</b></td>
+                        <td align="center"><b>فنشرح</b></td>
                         <td align="center"><b>مات كلية</b></td>
                         <td align="center"><b>كود</b></td>
                         <td align="center" width="80px"><b>بيل</b></td>
@@ -146,6 +152,7 @@
                             $studentSubject = mysqli_query($con, "SELECT * FROM studentSubject WHERE ss_id='$ss_id'");
                             $rowStudentSubject = mysqli_fetch_array($studentSubject);
                             $s_id = $rowStudentSubject['s_id'];
+                            $t_id = $rowStudentSubject['t_id'];
 
                             //Get subject data from subject table
                             $subject = mysqli_query($con, "SELECT * FROM subject WHERE s_id='$s_id'");
@@ -153,12 +160,24 @@
                             $s_code = $rowSubject['s_code'];
                             $s_aname = $rowSubject['s_arabName'];
                             $s_rname = $rowSubject['s_rumiName'];
+                            
+                            //Get teacher data from teachers table
+                            $teacher = mysqli_query($con, "SELECT * FROM teachers WHERE t_id='$t_id'");
+                            $rowTeacher = mysqli_fetch_array($teacher);
+                            $t_fname = $rowTeacher['t_fnameRumi'];
+                            $t_lname = $rowTeacher['t_lnameRumi'];
                         ?>
                         <tr>
                           
                           <td align="center">
                               <font size="2px">
                                 <?= $money ?>
+                              </font>
+                          </td>
+                          
+                          <td align="center">
+                              <font size="2px">
+                                  <?= $t_fname ?> - <?= $t_lname ?>
                               </font>
                           </td>
                           
@@ -189,7 +208,7 @@
                             <td align="center">
                                 <?= $sumMoney ?>
                             </td>
-                            <td colspan="3" align="center">
+                            <td colspan="4" align="center">
                                 جمله دويت سموا
                             </td>
                         </tr>

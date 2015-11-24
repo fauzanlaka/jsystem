@@ -1,6 +1,6 @@
-<div class="btn-group btn-group-justified">
-  <a href="?page=profile&&profilepage=show" class="btn btn-default"><span class="glyphicon glyphicon-user"></span> Profil anda</a>
-  <a href="?page=profile&&profilepage=edit" class="btn btn-default"><span class="glyphicon glyphicon-edit"></span> Ubah profil</a>
+<div class="pull-right">
+    <a href="?page=profile&&profilepage=show" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-user"></span> Profil anda</a>
+    <a href="?page=profile&&profilepage=edit" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-edit"></span> Ubah profil</a>
 </div>
 <?php
 $profilepage = $_GET['profilepage']; // To get the page

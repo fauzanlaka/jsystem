@@ -33,7 +33,7 @@
         <div class="form-group">
             <label class="col-lg-2 control-label">MATA KULIAH :</label>
             <div class="col-lg-5">
-                <input type="text" class="form-control input-sm" placeholder="RUMI" required name="s_rumiName">
+                <input type="text" class="form-control input-sm" placeholder="RUMI" name="s_rumiName">
             </div>
        </div>
         
