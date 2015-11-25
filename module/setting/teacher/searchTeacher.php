@@ -5,14 +5,14 @@
 ?>
 <br>
 <div class="pull-left">
-    <a href="?page=setting&&settingpage=teacherAdd" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-plus-sign"></span> TAMBAH</a>
+    <a href="?page=setting&&settingpage=teacherAdd" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-plus-sign"></span> TAMBAH</a>
 </div>
 <div class="pull-right">
         <form class="navbar-form" role="search" action="?page=setting&&settingpage=searchTeacher" method="post">
             <div class="input-group">
                 <input type="text" class="form-control" name="q" required>
             <div class="input-group-btn">
-                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                <button class="btn btn-success" type="submit"><i class="glyphicon glyphicon-search"></i></button>
             </div>
             </div>
         </form>
