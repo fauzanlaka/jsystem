@@ -6,7 +6,7 @@
     // Here we have the total row count
     $rows = $row[0];
     // This is the number of results we want displayed per page
-    $page_rows = 10;
+    $page_rows = 8;
     // This tells us the page number of our last page
     $last = ceil($rows/$page_rows);
     // This makes sure $last cannot be less than 1
@@ -28,9 +28,9 @@
     // This sets the range of rows to query for the chosen $pagenum
     $limit = 'LIMIT ' .($pagenum - 1) * $page_rows .',' .$page_rows;
     // This is your query again, it is for grabbing just one page worth of rows by applying $limit
-    $sql = "SELECT sr.*,st.*,re.* FROM student_register sr 
+    $sql = "SELECT sr.sr_id as id,sr.*,st.*,p.* FROM student_register sr 
             INNER JOIN students st ON sr.st_id=st.st_id
-            INNER JOIN register re ON sr.re_id=re.re_id ORDER BY sr_id DESC $limit";
+            LEFT OUTER JOIN payments p ON p.sr_id=sr.sr_id ORDER BY p_id DESC $limit";
     $query = mysqli_query($con, $sql);
     // This shows the user what page they are on, and the total number of pages
     $textline1 = "จำนวน(<b>$rows</b>)";
@@ -87,8 +87,9 @@
     <tr>
       <td align="center"><b>NO.POKOK</b></td>
       <td align="center"><b>NAMA-NASAB</b></td>
-      <td align="center"><b>نام - نسب</b></td>
+      <td align="center"><div id="subText"><b>نام - نسب</b></div></td>
       <td align="center"><b>SEMESTER/TAHUN</b></td>
+      <td align="center"><b>RESIT</b></td>
       <td align="center"><b>STATUS</b></td>
       <td align="center"><b>Hapus</b></td>
     </tr>
@@ -96,21 +97,22 @@
   <tbody>
 <?php
     while($row = mysqli_fetch_array($query)){
-        $id = $row['sr_id'];
+        $id = $row['id'];
         $student_id = str_replace("\'", "&#39;", $row["student_id"]);
         $name_r = str_replace("\'", "&#39;", $row["firstname_rumi"]);
         $lastname_r = str_replace("\'", "&#39;", $row["lastname_rumi"]);
         $name_j = str_replace("\'", "&#39;", $row["firstname_jawi"]);
         $lastname_j = str_replace("\'", "&#39;", $row["lastname_jawi"]);
-        $term = $row['term_id'];
+        $term = $row['term'];
         $year = $row['academic_year'];
         $status = $row['pay_status'];
 ?>
     <tr>
       <td align="center"><a href="?page=payment&&paymentpage=yuranpay&&id=<?= $id ?>"><?= $student_id ?></a></td>
       <td align="left"><?= strtoupper($name_r) ?> - <?= strtoupper($lastname_r) ?></td>
-      <td align="right"><?= $name_j ?> - <?= $lastname_j ?></td>
+      <td align="right"><div id='subText'><?= $name_j ?> - <?= $lastname_j ?></div></td>
       <td align="center"><?= $term ?>/<?= $year ?></td>
+      <td align="center"><?= $row['reciet_code'] ?></td>
 <?php
     if($status=="Belum bayar"){
 ?>

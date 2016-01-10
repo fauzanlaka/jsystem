@@ -139,7 +139,7 @@
         <div class="form-group">
                 <label class="col-lg-4 control-label">JUMLAH DUIT :</label> 
                 <div class="col-lg-3">
-                    <input name="money" class="form-control input-sm" type="number" required>
+                    <input name="money" class="form-control input-sm" type="number" value="<?= $yuran ?>">
                 </div>    
         </div>
         

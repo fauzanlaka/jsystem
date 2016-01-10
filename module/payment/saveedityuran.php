@@ -4,15 +4,19 @@
     $yuran = $_POST['yuran'];
     $pay_date = $_POST['pay_date'];
     $reciet_code = $_POST['reciet_code'];
+
+    $sql1 = mysqli_query($con, "SELECT * FROM payments WHERE reciet_code='$reciet_code' and sr_id!='$id'");
+    $row1 = mysqli_fetch_array($sql1);
     
-    if($money < $yuran){
+    if($row1[0] > 0){
 ?>
 <br>
 <div class="alert alert-dismissible alert-danger">
   <button type="button" class="close" data-dismiss="alert">×</button>
-  <strong>Maaf !</strong> Jumlah duit belum cukup <a href="?page=payment&&paymentpage=editpayyuran&&id=<?= $id ?>" class="alert-link">Klik untuk kembali</a>
+  <strong>Maaf !</strong> No. resit sudah di guna.
 </div>
 <?php
+    include("module/payment/editpayyuran.php");
     }else{
         $update = mysqli_query($con, "UPDATE payments SET
                 money='".$money."',

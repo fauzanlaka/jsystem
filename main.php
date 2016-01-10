@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="pagination/style.css" type="text/css">
     <link rel="stylesheet" href="function/checkuser.css" type="text/css">
     <link rel="stylesheet" href="select/dist/css/bootstrap-select.css">
+    <link href="font/font.css" rel="stylesheet" type="text/css">
     <style type="text/css">
         body{ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;}
         div#pagination_controls{font-size:21px;}
@@ -42,6 +43,10 @@
         
         <?php include("menu/indexMenu.php"); ?>
         <br><br><br>
+        
+        <div class="col-md-3">
+             <?php include("menu/sidebarMenu.php"); ?>
+        </div>
         
         <div class="col-md-9">
         
@@ -91,15 +96,17 @@
                             case 'dol':
                                 include 'module/dol/index.php';
                                 break;
+                            case 'transcript':
+                                include 'module/transcript/index.php';
+                                break;
+                            case 'admissions':
+                                include 'module/admission/index.php';
+                                break;
                         }
             ?>
          
         </div>
-        
-        <div class="col-md-3">
-             <?php include("menu/sidebarMenu.php"); ?>
-        </div>
-           
+
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>

@@ -16,7 +16,7 @@
                 <?php
                     $subject = mysqli_query($con, "SELECT * FROM subject GROUP BY s_code ORDER BY s_code");
                     while($row = mysqli_fetch_array($subject)){
-                        $s_name = $row['s_arabName'].$row['s_rumiName']."&nbsp;|&nbsp;".$row['s_code'];
+                        $s_name = $row['s_rumiName']."&nbsp;|&nbsp;".$row['s_code'];
                 ?>
                     <option value="<?= $row['s_id'] ?>"><?= $s_name ?></option>
                 <?php

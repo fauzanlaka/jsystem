@@ -83,7 +83,7 @@
                          <?php
                             while($rowSubject = mysqli_fetch_array($subject)){
                          ?>
-                         <option value="<?= $rowSubject['s_id'] ?>"><?= $rowSubject['s_code'] ?> , <?= $rowSubject['s_rumiName'] ?> </option>
+                         <option value="<?= $rowSubject['s_id'] ?>"><?= $rowSubject['s_rumiName'] ?> , <?= $rowSubject['s_code'] ?> </option>
                          <?php
                             }
                          ?>
