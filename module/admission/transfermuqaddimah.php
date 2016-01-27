@@ -82,7 +82,6 @@
 </div>
 <table class="table table-striped table-hover">
     <tr>
-        <td align="center"><b>NO.Daftar</b></td>
         <td align="center"><b>NAMA-NASAB</b></td>
         <td align="center"><div id="subText"><b>نام - نسب</b></div></td>
         <td align="center"><b>KAD PENGENALAN</b></td>
@@ -115,9 +114,8 @@
             }
     ?>
     <tr>
-        <td align="center"><?= $result['regNumber'] ?></td>
-        <td align="center"><?= $fname ?> - <?= $lname ?></td>
-        <td align="center"><div id="subText"><?= $fnameJ ?> - <?= $lnameJ ?></div></td>
+        <td align="left"><?= $fname ?> - <?= $lname ?></td>
+        <td align="right"><div id="subText"><?= $fnameJ ?> - <?= $lnameJ ?></div></td>
         <td align="center"><?= $cityzen_id ?></td>
         <td align="center"><?= $gender ?></td>
         <td align="center">

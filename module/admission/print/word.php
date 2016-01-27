@@ -71,6 +71,8 @@
                         <td align="center"><div id="subText"><b>فيليهن فرتام</b></div></td>
                         <td align="center"><div id="subText"><b>نمبر</b></div></td>
                         <td align="center"><div id="subText"><b>بيليق</b></div></td>
+                        <td align="center"><div id="subText"><b>نمبر دفتر</b></div></td>
+                        <td align="center"><div id="subText"><b>کمفوڠ</b></div></td>
                         <td align="center"><div id="subText"><b>سكوله</b></div></td>
                         <td align="center"><div id="subText"><b>نام - نسب</b></div></td>
                         <td align="center"><div id="subText"><b>بيل</b></div></td> 
@@ -84,7 +86,9 @@
                             $sanawi_graduate = str_replace("\'", "&#39;", $rowPretestMen["sanawi_graduate"]);
                             $testClass = $rowPretestMen['testClass'];
                             $testNumber = $rowPretestMen['testNumber'];
-
+                            $sanawiVillage = str_replace("\'", "&#39;", $rowPretestMen["sanawiVillage"]);
+                            $odrNumber = $rowPretestMen['odrNumber'];
+                            
                             //Faculty and department choesed
                             $first_ftId = $rowPretestMen['first_ftId'];
                             $first_dpId = $rowPretestMen['first_dpId'];
@@ -140,7 +144,9 @@
                             <td align="center"><?= $selected ?></td>
                             <td align="center"><?= $testNumber ?></td>
                             <td align="center"><?= $testClass ?></td>
-                            <td align="center"><div id="subText"><?= $sanawi_graduate ?></div></td>
+                            <td align="center"><?= $odrNumber ?></td>
+                            <td align="right"><?= $sanawiVillage ?></td>
+                            <td align="right"><div id="subText"><?= $sanawi_graduate ?></div></td>
                             <td align="center"><div id="subText"><?= $fname ?> - <?= $lname ?></div></td>
                             <td align="center"><?= $i ?></td>
                         </tr>

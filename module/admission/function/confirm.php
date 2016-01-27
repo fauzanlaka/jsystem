@@ -14,7 +14,7 @@
             if($maleA == ''){
                 $testClassSet = 'A';
                 $testNumberSet = 1;
-            }elseif($maleA <= 2){
+            }elseif($maleA <= 29){
                 $testClassSet = 'A';
                 $testNumberSet = $maleA+1;
             }else{
@@ -24,7 +24,7 @@
                 if($maleB == ''){
                     $testClassSet = 'B';
                     $testNumberSet = 1;
-                }elseif($maleB <= 2){
+                }elseif($maleB <= 29){
                     $testClassSet = 'B';
                     $testNumberSet = $maleB+1;
                 }else{
@@ -34,7 +34,7 @@
                     if($maleC == ''){
                         $testClassSet = 'C';
                         $testNumberSet = 1;
-                    }elseif($maleC <= 2){
+                    }elseif($maleC <= 29){
                         $testClassSet = 'C';
                         $testNumberSet = $maleC+1;
                     }else{
@@ -44,7 +44,7 @@
                         if($maleD == ''){
                             $testClassSet = 'D';
                             $testNumberSet = 1;
-                            }elseif($maleD <= 2){
+                            }elseif($maleD <= 29){
                                 $testClassSet = 'D';
                                 $testNumberSet = $maleD+1;
                         }else{
@@ -54,7 +54,7 @@
                             if($maleE == ''){
                                 $testClassSet = 'E';
                                 $testNumberSet = 1;
-                                }elseif($maleE <= 2){
+                                }elseif($maleE <= 29){
                                     $testClassSet = 'E';
                                     $testNumberSet = $maleE+1;
                             }else{
@@ -64,7 +64,7 @@
                                 if($maleF == ''){
                                     $testClassSet = 'F';
                                     $testNumberSet = 1;
-                                    }elseif($maleF <= 2){
+                                    }elseif($maleF <= 29){
                                         $testClassSet = 'F';
                                         $testNumberSet = $maleF+1;
                                 }else{
@@ -80,8 +80,13 @@
                     }
                 }
              }
+             
+            $odrMax = mysqli_query($con, "SELECT MAX(odrNumber) AS odrNumber FROM pretest");
+            $rsOdr = mysqli_fetch_array($odrMax);
+            $maxOdr = $rsOdr['odrNumber'];
+            $odrNumber = $maxOdr+1;
              //Update pretest data table
-             $PRETEST = mysqli_query($con, "UPDATE pretest SET testClass='$testClassSet',testNumber='$testNumberSet',payStatus='1' WHERE st_id='$st_id'");
+             $PRETEST = mysqli_query($con, "UPDATE pretest SET testClass='$testClassSet',testNumber='$testNumberSet',odrNumber='$odrNumber',payStatus='1' WHERE st_id='$st_id'");
 ?>
              <script>
                 alert("Pendaftaran calon mahasiswa sudah sempurna, sila print kertas peperiksaan");
@@ -99,7 +104,7 @@
             if($femaleG == ''){
                 $testClassSet = 'G';
                 $testNumberSet = 1;
-                }elseif($femaleG <= '5'){
+                }elseif($femaleG <= 29){
                     $testClassSet = 'G';
                     $testNumberSet = $femaleG+1;
             // Class  H  
@@ -110,7 +115,7 @@
                 if($femaleH == ''){
                     $testClassSet = 'H';
                     $testNumberSet = 1;
-                    }elseif($femaleH <= '2'){
+                    }elseif($femaleH <= 29){
                         $testClassSet = 'H';
                         $testNumberSet = $femaleH+1;
                 //Class I
@@ -121,7 +126,7 @@
                     if($femaleI == ''){
                         $testClassSet = 'I';
                         $testNumberSet = 1;
-                        }elseif($femaleI <= '2'){
+                        }elseif($femaleI <= 29){
                         $testClassSet = 'I';
                         $testNumberSet = $femaleI+1;
                     //Class I
@@ -132,7 +137,7 @@
                         if($femaleJ == ''){
                             $testClassSet = 'J';
                             $testNumberSet = 1;
-                            }elseif($femaleJ <= '2'){
+                            }elseif($femaleJ <= 29){
                             $testClassSet = 'J';
                             $testNumberSet = $femaleJ+1;
                         //Class K
@@ -143,7 +148,7 @@
                             if($femaleK == ''){
                                 $testClassSet = 'K';
                                 $testNumberSet = 1;
-                                }elseif($femaleK <= '2'){
+                                }elseif($femaleK <= 29){
                                 $testClassSet = 'K';
                                 $testNumberSet = $femaleK+1;
                             //Class K
@@ -154,7 +159,7 @@
                                 if($femaleL == ''){
                                     $testClassSet = 'L';
                                     $testNumberSet = 1;
-                                    }elseif($femaleL <= '2'){
+                                    }elseif($femaleL <= 29){
                                     $testClassSet = 'L';
                                     $testNumberSet = $femaleL+1;
                                 //Class M
@@ -165,7 +170,7 @@
                                     if($femaleM == ''){
                                         $testClassSet = 'M';
                                         $testNumberSet = 1;
-                                        }elseif($femaleM <= '2'){
+                                        }elseif($femaleM <= 29){
                                         $testClassSet = 'M';
                                         $testNumberSet = $femaleM+1;
                                     //Class N
@@ -176,7 +181,7 @@
                                         if($femaleN == ''){
                                             $testClassSet = 'N';
                                             $testNumberSet = 1;
-                                            }elseif($femaleN <= '2'){
+                                            }elseif($femaleN <= 29){
                                             $testClassSet = 'N';
                                             $testNumberSet = $femaleN+1;
                                         //Class O
@@ -187,7 +192,7 @@
                                             if($femaleO == ''){
                                                 $testClassSet = 'O';
                                                 $testNumberSet = 1;
-                                                }elseif($femaleO <= '2'){
+                                                }elseif($femaleO <= 29){
                                                 $testClassSet = 'O';
                                                 $testNumberSet = $femaleO+1;
                                             //Class P
@@ -198,7 +203,7 @@
                                                 if($femaleP == ''){
                                                     $testClassSet = 'P';
                                                     $testNumberSet = 1;
-                                                    }elseif($femaleP <= '2'){
+                                                    }elseif($femaleP <= 29){
                                                     $testClassSet = 'P';
                                                     $testNumberSet = $femaleP+1;
                                                 //Class Q
@@ -209,7 +214,7 @@
                                                     if($femaleQ == ''){
                                                         $testClassSet = 'Q';
                                                         $testNumberSet = 1;
-                                                        }elseif($femaleQ <= '2'){
+                                                        }elseif($femaleQ <= 29){
                                                         $testClassSet = 'Q';
                                                         $testNumberSet = $femaleQ+1;
                                                     //Class R
@@ -220,7 +225,7 @@
                                                         if($femaleR == ''){
                                                             $testClassSet = 'R';
                                                             $testNumberSet = 1;
-                                                            }elseif($femaleR <= '2'){
+                                                            }elseif($femaleR <= 29){
                                                             $testClassSet = 'R';
                                                             $testNumberSet = $femaleR+1;
                                                         //Class S
@@ -231,7 +236,7 @@
                                                             if($femaleS == ''){
                                                                 $testClassSet = 'S';
                                                                 $testNumberSet = 1;
-                                                                }elseif($femaleS <= '2'){
+                                                                }elseif($femaleS <= 29){
                                                                 $testClassSet = 'S';
                                                                 $testNumberSet = $femaleS+1;
                                                             //Class T
@@ -242,7 +247,7 @@
                                                                 if($femaleT == ''){
                                                                     $testClassSet = 'T';
                                                                     $testNumberSet = 1;
-                                                                    }elseif($femaleT <= '2'){
+                                                                    }elseif($femaleT <= 29){
                                                                     $testClassSet = 'T';
                                                                     $testNumberSet = $femaleT+1;
                                                                 //Class U
@@ -253,7 +258,7 @@
                                                                     if($femaleU == ''){
                                                                         $testClassSet = 'U';
                                                                         $testNumberSet = 1;
-                                                                        }elseif($femaleU <= '2'){
+                                                                        }elseif($femaleU <= 29){
                                                                         $testClassSet = 'U';
                                                                         $testNumberSet = $femaleU+1;
                                                                     }else{
@@ -278,11 +283,16 @@
                     }
                 }
             }
+            $odrMax = mysqli_query($con, "SELECT MAX(odrNumber) AS odrNumber FROM pretest");
+            $rsOdr = mysqli_fetch_array($odrMax);
+            $maxOdr = $rsOdr['odrNumber'];
+            $odrNumber = $maxOdr+1;
             //Update pretest data table
             $PRETEST = mysqli_query($con, "UPDATE pretest SET
                                      testClass = '$testClassSet',
                                      testNumber = '$testNumberSet',
-                                     payStatus = '1'
+                                     payStatus = '1',
+                                     odrNumber = '$odrNumber'
                                      WHERE st_id='$st_id'   
                                      ");
 ?>

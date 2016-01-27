@@ -67,7 +67,7 @@ $(document).ready(function(){
             $('#cityzenid').keyup(function(){ // Keyup function for check the user action in input
                 var Username = $(this).val(); // Get the username textbox using $(this) or you can use directly $('#username')
                 var UsernameAvailResult = $('#username_avail_result3'); // Get the ID of the result where we gonna display the results
-                if(Username.length > 12) { // check if greater than 2 (minimum 3)
+                if(Username.length > 13) { // check if greater than 2 (minimum 3)
                     UsernameAvailResult.html('Loading..'); // Preloader, use can use loading animation here
                     var UrlToPass = 'action=username_availability&username='+Username;
                     $.ajax({ // Send the username val to another checker.php using Ajax in POST menthod

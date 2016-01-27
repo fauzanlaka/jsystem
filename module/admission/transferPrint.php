@@ -65,7 +65,7 @@
         $student = mysqli_query($con, "SELECT s.*,p.* FROM students s INNER JOIN pretest p ON s.st_id=p.st_id WHERE s.st_id='$st_id'");
         $result = mysqli_fetch_array($student);
         
-        $odrNumber = $result['odrNumber'];
+        $odrNumber = $result['odr2Number'];
         $first_ftId = $result['first_ftId'];
         $first_dpId = $result['first_dpId'];
         $second_ftId = $result['second_ftId'];
@@ -130,14 +130,11 @@
                         <div class="pull-right">
                             <table border="0px">
                                 <tr>
-                                    <td width="80px" align="center"><b>No.Daftar |</b></td>
-                                    <td width="50px" align="center"><b>Bilik |</b></td>
-                                    <td width="50px" align="center"><b>Kursi</b></td>
+                                    <td width="80px" align="center"><b>No.Daftar</b></td>
                                 </tr>
                                 <tr>
                                     <td width="50px" align="center"><?= $odrNumber ?></td>
-                                    <td width="50px" align="center"><?= $testClass ?></td>
-                                    <td width="50px" align="center"><?= $testNumber ?></td>
+
                                 </tr>
                             </table>
     

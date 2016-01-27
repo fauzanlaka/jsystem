@@ -14,7 +14,7 @@
     $payStatus = $result['payStatus'];
     $testClass = $result['testClass'];
     $testNumber = $result['testNumber'];
-    $regNumber = $result['regNumber'];
+    $odrNumber = $result['odrNumber'];
     
     //ID for data updating 
     $st_id = $id;
@@ -45,7 +45,7 @@
         <?php
             }else{
         ?>
-        <H5><b>NO.Daftar :</b> <?= $regNumber ?> <b>|Bilik</b> : <?= $testClass ?><b>|No</b> : <?= $testNumber ?></H5>
+        <H5><b>NO.Daftar :</b> <?= $odrNumber ?> <b>|Bilik</b> : <?= $testClass ?><b>|No</b> : <?= $testNumber ?></H5>
         <?php
             }
         ?>
@@ -232,8 +232,12 @@
     
             <div class="form-group">
                 <label for="inputEmail" class="col-lg-3 control-label">Ibtidai :</label>
-                <div class="col-lg-2">
+                <div class="col-lg-3">
                     <input type="text" class="form-control input-sm" name="ibtidai" value="<?= $ibtidai_graduate = str_replace("\'", "&#39;", $result["ibtidai_graduate"]) ?>">
+                </div>
+                <label class="col-lg-1 control-label">Kampong</label>
+                <div class="col-lg-2">
+                    <input type="text" class="form-control input-sm" name="ibtidaiVillage" value="<?= $ibtidaiVillage = str_replace("\'", "&#39;", $result["ibtidaiVillage"]) ?>">
                 </div>
                 <label class="col-lg-1 control-label">Tahun</label>
                 <div class="col-lg-2">
@@ -243,8 +247,12 @@
     
             <div class="form-group">
                 <label for="inputEmail" class="col-lg-3 control-label">Mutawassit :</label>
-                <div class="col-lg-2">
+                <div class="col-lg-3">
                     <input type="text" class="form-control input-sm" name="mutawassit" value="<?= $mutawasit_graduate = str_replace("\'", "&#39;", $result["mutawasit_graduate"]) ?>">
+                </div>
+                <label class="col-lg-1 control-label">Kampong</label>
+                <div class="col-lg-2">
+                    <input type="text" class="form-control input-sm" name="mutawassitVillage" value="<?= $mutawasitVillage = str_replace("\'", "&#39;", $result["mutawassitVillage"]) ?>">
                 </div>
                 <label class="col-lg-1 control-label">Tahun</label>
                 <div class="col-lg-2">
@@ -254,8 +262,12 @@
     
             <div class="form-group">
                 <label for="inputEmail" class="col-lg-3 control-label">Sanawi :</label>
-                <div class="col-lg-2">
+                <div class="col-lg-3">
                     <input type="text" class="form-control input-sm" name="sanawi" value="<?= $sanawi_graduate = str_replace("\'", "&#39;", $result["sanawi_graduate"]) ?>">
+                </div>
+                <label class="col-lg-1 control-label">Kampong</label>
+                <div class="col-lg-2">
+                    <input type="text" class="form-control input-sm" name="sanawiVillage" value="<?= $sanawiVillage = str_replace("\'", "&#39;", $result["sanawiVillage"]) ?>">
                 </div>
                 <label class="col-lg-1 control-label">Tahun</label>
                 <div class="col-lg-2">
@@ -267,7 +279,7 @@
     
             <div class="form-group">
                 <label for="inputEmail" class="col-lg-3 control-label">โรงเรียนประถม :</label>
-                <div class="col-lg-2">
+                <div class="col-lg-3">
                     <input type="text" class="form-control input-sm" name="primaryschool" value="<?= $down_graduate = str_replace("\'", "&#39;", $result["down_graduate"]) ?>">
                 </div>
                 <label class="col-lg-1 control-label">ปีที่จบ</label>
@@ -278,7 +290,7 @@
     
             <div class="form-group">
                 <label for="inputEmail" class="col-lg-3 control-label">โรงเรียนมัธยมต้น :</label>
-                <div class="col-lg-2">
+                <div class="col-lg-3">
                     <input type="text" class="form-control input-sm" name="firsthightschool" value="<?= $first_highschool_graduate = str_replace("\'", "&#39;", $result["first_highschool_graduate"]) ?>">
                 </div>
                 <label class="col-lg-1 control-label">ปีที่จบ</label>
@@ -289,7 +301,7 @@
 
             <div class="form-group">
                 <label for="inputEmail" class="col-lg-3 control-label">โรงเรียนมัธยมปลาย :</label>
-                <div class="col-lg-2">
+                <div class="col-lg-3">
                     <input type="text" class="form-control input-sm" name="lastthightschool" value="<?= $second_highschool_graduate = str_replace("\'", "&#39;", $result["second_highschool_graduate"]) ?>">
                 </div>
                 <label class="col-lg-1 control-label">ปีที่จบ</label>
@@ -460,7 +472,7 @@
 
     
         <p class="text-center">
-                <button type="submit" class="btn btn-success btn-sm"> SIMPAN</button>
+                <button type="submit" class="btn btn-success btn-sm"> SAVE</button>
         </p>
 
 </form>

@@ -53,6 +53,9 @@
     $first_dpId = $_POST['first_dpId'];
     $second_ftId = $_POST['second_ftId'];
     $second_dpId = $_POST['second_dpId'];
+    $ibtidaiVillage = mysqli_real_escape_string($con, $_POST['ibtidaiVillage']);
+    $mutawassitVillage = mysqli_real_escape_string($con, $_POST['mutawassitVillage']);
+    $sanawiVillage = mysqli_real_escape_string($con, $_POST['sanawiVillage']);
     
     $student = mysqli_query($con, "UPDATE students SET
                             firstname_rumi = '$fnameRumi',
@@ -100,7 +103,10 @@
                             certificate  = '$certificate',
                             citizen_book = '$citizen_book',
                             id_book = '$id_book',
-                            photo = '$photo'
+                            photo = '$photo',
+                            ibtidaiVillage = '$ibtidaiVillage',
+                            mutawassitVillage = '$mutawassitVillage',
+                            sanawiVillage = '$sanawiVillage'
                             WHERE st_id='$st_id'
                             "); 
     $pretest = mysqli_query($con, "UPDATE pretest SET

@@ -49,7 +49,7 @@
                 <div class="form-group">
                     <label class="col-lg-3 control-label">No.Kad pengenalan :</label>
                     <div class="col-lg-3">
-                        <input type="text" class="form-control input-sm" required name="t_cityzenid" id="cityzenid">
+                        <input type="text" class="form-control input-sm" maxlength="13" required name="t_cityzenid" id="cityzenid">
                     </div>
                     <div class="col-lg-4">
                         <span class="username_avail_result" id="username_avail_result3"></span>

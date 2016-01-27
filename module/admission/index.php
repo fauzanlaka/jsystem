@@ -29,6 +29,14 @@
             </ul>
         </div>
         
+        <div class="btn-group">
+            <button class="btn btn-success btn-sm"><span class="glyphicon glyphicon-cog"></span> Setting</button>
+            <button data-toggle="dropdown" class="btn btn-success btn-sm dropdown-toggle" data-placeholder="false"><span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="?page=admissions&&admissionpage=studentId">NO.Pokok</a></li>
+            </ul>
+        </div>
+        
     </div>
       
 
@@ -125,6 +133,21 @@
                 break;
             case'transferWord':
                 include 'module/admission/transferWord.php';
+                break;
+            case'deleteList':
+                include 'module/admission/function/deleteList.php';
+                break;
+            case'deleteTransfer':
+                include 'module/admission/function/deleteTransfer.php';
+                break;
+            case'studentId':
+                include 'module/admission/studentId.php';
+                break;
+            case'stdId':
+                include 'module/admission/stdId.php';
+                break;
+            case'stdIdSave':
+                include 'module/admission/function/stdIdSave.php';
                 break;
         }
     ?>

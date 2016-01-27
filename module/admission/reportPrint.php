@@ -14,13 +14,15 @@
         <td align="center"><div id="subText"><b>فيليهن كدوا</b></div></td>
         <td align="center"><div id="subText"><b>فيليهن فرتام</b></div></td>
         <td align="center"><div id="subText"><b>نمبر</b></div></td>
-        <td align="center"><div id="subText"><b>بيليك</b></div></td>
+        <td align="center"><div id="subText"><b>بيليق</b></div></td>
+        <td align="center"><div id="subText"><b>نمبر دفتر</b></div></td>
+        <td align="center"><div id="subText"><b>کمفوڠ</b></div></td>
         <td align="center"><div id="subText"><b>سكوله</b></div></td>
         <td align="center"><div id="subText"><b>نام - نسب</b></div></td>
         <td align="center"><div id="subText"><b>بيل</b></div></td> 
     </tr>
     <?php
-        $pretestMen = mysqli_query($con, "SELECT p.*,s.* FROM pretest p JOIN students s ON p.st_id=s.st_id WHERE p.testClass='$class'");
+        $pretestMen = mysqli_query($con, "SELECT p.*,s.* FROM pretest p JOIN students s ON p.st_id=s.st_id WHERE p.testClass='$class' ORDER BY sanawi_graduate");
         $i = 1;
         while($rowPretestMen = mysqli_fetch_array($pretestMen)){
             $fname = str_replace("\'", "&#39;", $rowPretestMen["firstname_jawi"]);
@@ -28,6 +30,8 @@
             $sanawi_graduate = str_replace("\'", "&#39;", $rowPretestMen["sanawi_graduate"]);
             $testClass = $rowPretestMen['testClass'];
             $testNumber = $rowPretestMen['testNumber'];
+            $odrNumber = $rowPretestMen['odrNumber'];
+            $sanawiVillage = str_replace("\'", "&#39;", $rowPretestMen["sanawiVillage"]);
             
             //Faculty and department choesed
             $first_ftId = $rowPretestMen['first_ftId'];
@@ -84,7 +88,9 @@
             <td align="center"><?= $selected ?></td>
             <td align="center"><?= $testNumber ?></td>
             <td align="center"><?= $testClass ?></td>
-            <td align="center"><?= $sanawi_graduate ?></td>
+            <td align="center"><?= $odrNumber ?></td>
+            <td align="right"><?= $sanawiVillage ?></td>
+            <td align="right"><?= $sanawi_graduate ?></td>
             <td align="right"><div id="subText"><?= $fname ?> - <?= $lname ?></div></td>
             <td align="center"><?= $i ?></td>
         </tr>

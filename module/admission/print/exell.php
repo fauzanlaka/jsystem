@@ -48,10 +48,10 @@
         
         <table>
            <tr>
-                <td colspan="7" align="center"><?= $class ?> چالون مهاسيسوا بيليق </td>
+                <td colspan="9" align="center"><?= $class ?> چالون مهاسيسوا بيليق </td>
             </tr> 
             <tr>
-                <td colspan="7"</td>
+                <td colspan="9"</td>
             </tr>
         </table>
         
@@ -61,7 +61,9 @@
                         <td align="center"><b>فيليهن كدوا</b></td>
                         <td align="center"><b>فيليهن فرتام</b></td>
                         <td align="center"><b>نمبر</b></td>
-                        <td align="center"><b>بيليك</b></td>
+                        <td align="center"><b>بيليق</b></td>
+                        <td align="center"><b>نمبر دفتر</b></td>
+                        <td align="center"><b>کمفوڠ</b></td>
                         <td align="center"><b>سكوله</b></td>
                         <td align="center"><b>نام - نسب</b></td>
                         <td align="center"><b>بيل</b></td> 
@@ -75,6 +77,8 @@
                             $sanawi_graduate = str_replace("\'", "&#39;", $rowPretestMen["sanawi_graduate"]);
                             $testClass = $rowPretestMen['testClass'];
                             $testNumber = $rowPretestMen['testNumber'];
+                            $odrNumber = $rowPretestMen['odrNumber'];
+                            $sanawiVillage = str_replace("\'", "&#39;", $rowPretestMen["sanawiVillage"]);
 
                             //Faculty and department choesed
                             $first_ftId = $rowPretestMen['first_ftId'];
@@ -131,7 +135,9 @@
                             <td align="center"><?= $selected ?></td>
                             <td align="center"><?= $testNumber ?></td>
                             <td align="center"><?= $testClass ?></td>
-                            <td align="center"><?= $sanawi_graduate ?></td>
+                            <td align="center"><?= $odrNumber ?></td>
+                            <td align="right"><?= $sanawiVillage ?></td>
+                            <td align="right"><?= $sanawi_graduate ?></td>
                             <td align="center"><?= $fname ?> - <?= $lname ?></td>
                             <td align="center"><?= $i ?></td>
                         </tr>

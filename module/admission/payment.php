@@ -110,6 +110,6 @@
   <input type="hidden" name="p_id" value="<?= $p_id ?>">  
   <p class="text-center">
       <?= $reciet ?>
-      <button type="submit" class="btn btn-success btn-sm">Bayar</button>
+      <button type="submit" class="btn btn-success btn-sm">SAVE</button>
   </p>
 </form>

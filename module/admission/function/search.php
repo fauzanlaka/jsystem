@@ -1,4 +1,4 @@
-<h4><span class="glyphicon glyphicon-list"></span> Daftar calon mahasiswa tahun 1</h4>
+<h4><span class="glyphicon glyphicon-list"></span> DAFTAR CALON MAHASISWA TAHUN 1</h4>
 <div class="pull-left">
         <form class="navbar-form" role="search" action="?page=admissions&&admissionpage=search" method="post">
             <div class="input-group">
@@ -13,11 +13,11 @@
 
 <table class="table table-striped table-hover">
     <tr>
-        <td align="center"><b>NO.Daftar</b></td>
         <td align="center"><b>NAMA-NASAB</b></td>
         <td align="center"><div id="subText"><b>نام - نسب</b></div></td>
         <td align="center"><b>KAD PENGENALAN</b></td>
         <td align="center"><b>JENIS KELAMIN</b></td>
+        <td align="center"><b>HAPUS</b></td>
         <td align="center"><b>STATUS</b></td>
     </tr>
     <?php
@@ -48,11 +48,11 @@
             }
     ?>
     <tr>
-        <td align="center"><?= $result['regNumber'] ?></td>
         <td align="center"><?= $fname ?> - <?= $lname ?></td>
         <td align="center"><div id="subText"><?= $fnameJ ?> - <?= $lnameJ ?></div></td>
         <td align="center"><?= $cityzen_id ?></td>
         <td align="center"><?= $gender ?></td>
+        <td align="center"><a href="?page=admissions&&admissionpage=deleteList&&st_id=<?= $id ?>" class="btn btn-warning btn-sm" onclick="return confirm('Anda yakin untuk hapus data ini ?')"><span class="glyphicon glyphicon-trash"></span> Hapus</a></td>
         <td align="center"><a href="?page=admissions&&admissionpage=register&&id=<?= $id ?>"><?= $btnStatus ?></a></td>
     </tr>
     <?php

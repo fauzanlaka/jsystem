@@ -144,6 +144,6 @@
   <input type="hidden" name="st_id" value="<?= $st_id ?>">  
   <p class="text-center">
       <?= $reciet ?>
-      <button type="submit" class="btn btn-success btn-sm">Bayar</button>
+      <button type="submit" class="btn btn-success btn-sm">SAVE</button>
   </p>
 </form>
